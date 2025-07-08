@@ -42,7 +42,7 @@ body {
 
 .marquee-content {
     white-space: nowrap;
-    animation: marquee 30s linear infinite;
+    animation: marquee 20s linear infinite;
     font-size: 18px;
 }
 
@@ -2009,10 +2009,11 @@ body {
         padding: 0;
         border-radius: 12px;
     }
-    .modal-body {
-        padding: 12px 7px;
-        grid-template-columns: 1fr;
-        gap: 17px;
+    .products-grid,
+    .categories-grid,
+    .price-options {
+        grid-template-columns: 1fr 1fr;  /* <-- 2 columns for 600px and below */
+        gap: 14px;
     }
     .main-image {
         border-radius: 12px;
@@ -2081,16 +2082,33 @@ body {
     .main-image {
         aspect-ratio: 4/2 !important;
     }
-}
-
-@media (max-width: 480px) {
-    .cart-page-item{
-        flex-direction: column;
-        align-items: flex-start;
+    .products-grid,
+    .categories-grid,
+    .price-options {
+        grid-template-columns: 1fr 1fr;  /* Always 2 columns for 480px and below */
+        gap: 10px;
     }
 }
 
+@media (max-width: 425px) {
+    .price-btn{
+        font-weight: 200;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
 
+/* body {
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+}
+
+.section-title {
+  font-size: clamp(1.1rem, 5vw, 2.2rem);
+}
+
+.banner-content h2 {
+  font-size: clamp(1rem, 6vw, 2.5rem);
+} */
 
 @media print {
     .navbar,
