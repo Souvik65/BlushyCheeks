@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blushy Cheeks </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scrolling Marquee Bar -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>✨ 50% OFF on Selected Items! ✨ Free Shipping on Orders Over ₹500! ✨ New Arrivals Every Week! ✨ 50% OFF
+                on Selected Items! ✨</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar"  id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/logo.png" alt="BlushyCheeks Logo" class="logo-img" loading="lazy">
+                </a>
+                <!-- <h1>BlushyCheeks</h1> -->
+                <!-- <span>✨</span> -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#home" class="nav-link" tabindex="0">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#shop" class="nav-link" tabindex="0">
+                        <i class="fas fa-store"></i>
+                        <span>Shop</span>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#new-arrivals" tabindex="0">New Arrivals</a>
+                        <a href="#all-products" tabindex="0">All Products</a>
+                        <a href="#category" tabindex="0">Shop by Category</a>
+                        <a href="#price" tabindex="0">Shop by Price</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" tabindex="0">
+                        <i class="fas fa-heart"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" tabindex="0">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#help" class="nav-link" tabindex="0">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div> -->
+            <div class="cart-container">
+                <button class="cart-btn" id="cartBtn" aria-label="Open shopping cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger" tabindex="0" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+        <!-- Banner Section -->
+        <section class="banner" id="home">
+            <div class="banner-slider">
+                <div class="banner-slide active">
+                    <img src="images/19.jpg" alt="Cute Keychain" loading="lazy" >
+                    <div class="banner-content">
+                        <h2>Adorable Keychains Collection</h2>
+                        <p>Starting from ₹199</p>
+                        <button class="cta-btn" tabindex="0" aria-label="Shop keychains">Shop Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <img src="images/21.jpg" alt="Crochet Items" loading="lazy" >
+                    <div class="banner-content">
+                        <h2>Handmade Crochet Items</h2>
+                        <p>Starting from ₹299</p>
+                        <button class="cta-btn" tabindex="0" aria-label="Shop crochet items">Shop Now</button>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <img src="images/17.jpg" alt="Cute Rings" loading="lazy" >
+                    <div class="banner-content">
+                        <h2>Aesthetic Ring Collection</h2>
+                        <p>Starting from ₹149</p>
+                        <button class="cta-btn" tabindex="0" aria-label="Shop rings">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-dots">
+                <span class="dot active" data-slide="0" tabindex="0" aria-label="Go to slide 1"></span>
+                <span class="dot" data-slide="1" tabindex="0" aria-label="Go to slide 2"></span>
+                <span class="dot" data-slide="2" tabindex="0" aria-label="Go to slide 3"></span>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="new-arrivals" id="new-arrivals">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-sparkles"></i>
+                    New Arrivals
+                    <i class="fas fa-sparkles"></i>
+                </h2>
+                <div class="products-grid" id="newArrivalsGrid" aria-live="polite">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop by Category Section -->
+        <section class="shop-by-category" id="category">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-tags"></i>
+                    Shop by Category
+                    <i class="fas fa-tags"></i>
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="crochet" tabindex="0" aria-label="Shop crochet">
+                        <div class="category-icon"><i class="fas fa-cut"></i></div>
+                        <h3>Crochet</h3>
+                        <p>Handmade with love</p>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Crochet">Shop Crochet</button>
+                    </div>
+                    <div class="category-card" data-category="keychains" tabindex="0" aria-label="Shop keychains">
+                        <div class="category-icon"><i class="fas fa-key"></i></div>
+                        <h3>Keychains</h3>
+                        <p>Cute & functional</p>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Keychains">Shop Keychains</button>
+                    </div>
+                    <div class="category-card" data-category="rings" tabindex="0" aria-label="Shop rings">
+                        <div class="category-icon"><i class="fas fa-ring"></i></div>
+                        <h3>Rings</h3>
+                        <p>Aesthetic jewelry</p>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Rings">Shop Rings</button>
+                    </div>
+                    <div class="category-card" data-category="cute-decor" tabindex="0" aria-label="Shop cute decor">
+                        <div class="category-icon"><i class="fas fa-home"></i></div>
+                        <h3>Cute Decor</h3>
+                        <p>Home sweetness</p>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Decor">Shop Decor</button>
+                    </div>
+                    <div class="category-card" data-category="gifts" tabindex="0" aria-label="Shop gifts">
+                        <div class="category-icon"><i class="fas fa-gift"></i></div>
+                        <h3>Gifts</h3>
+                        <p>Perfect presents</p>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Gifts">Shop Gifts</button>
+                    </div>
+                    <div class="category-card" data-category="accessories" tabindex="0" aria-label="Shop accessories">
+                        <div class="category-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Accessories</h3>
+                        <p>Complete the look</p>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Accessories">Shop Accessories</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop by Price Section -->
+        <section class="shop-by-price" id="price">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-dollar-sign"></i>
+                    Shop by Price
+                    <i class="fas fa-dollar-sign"></i>
+                </h2>
+                <div class="price-options">
+                    <!-- Populated by JS for all 4 cards including All Collection -->
+                </div>
+            </div>
+        </section>
+
+        <!-- All Products Section -->
+        <section class="all-products" id="all-products">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-box-open"></i>
+                    All Products
+                    <i class="fas fa-box-open"></i>
+                </h2>
+                <div class="products-grid" id="allProductsGrid" aria-live="polite">
+                    <!-- Product cards via JS -->
+                </div>
+                <div id="viewMoreWrapper"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    About BlushyCheeks
+                    <i class="fas fa-heart"></i>
+                </h2>
+                <div class="about-content">
+                    <p>
+                        Welcome to Blushy Cheeks! We are passionate about bringing you the cutest handmade and aesthetic
+                        accessories to add a touch of joy to your daily life. Each item is crafted with love, attention
+                        to detail, and a sprinkle of crafty spirit.
+                    </p>
+                    <p>
+                        Our mission is to spread happiness and creativity through unique, beautifully crafted products.
+                        Whether you’re shopping for yourself or looking for the perfect gift, we hope you find something
+                        you adore at Blushy Cheeks!
+                    </p>
+                    <p>
+                        Thank you for supporting us and our handmade artistry. Stay cute, stay crafty! 🌸
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Blushy Cheeks</h3>
+                        <p>Bringing you the cutest handmade items and aesthetic accessories for your daily dose of
+                            cutest handmade and aesthetic accessories!</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/anushka.this.sidee/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            
+                            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" tabindex="0">Home</a></li>
+                            <li><a href="#new-arrivals" tabindex="0">New Arrivals</a></li>
+                            <li><a href="#category" tabindex="0">Categories</a></li>
+                            <li><a href="#about" tabindex="0">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Customer Care</h4>
+                        <ul>
+                            <li><a href="#contact" tabindex="0">Contact Us</a></li>
+                            <li><a href="#help" tabindex="0">Help Center</a></li>
+                            <!-- <li><a href="#" tabindex="0">Shipping Info</a></li> -->
+                            <!-- <li><a href="#" tabindex="0">Returns</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Blushy Cheeks. Made with 💕 for aesthetic lovers.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Category Pages (hidden by default, shown by JS) -->
+    <div id="categoryPages" style="display:none;" aria-live="polite">
+        <!-- Populated by JS -->
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cartPage" class="cart-page" style="display: none;">
+        <div class="container">
+            <div class="cart-page-header">
+                <button class="back-btn" onclick="goBackToHome()" tabindex="0" aria-label="Back to Shopping">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Shopping
+                </button>
+                <h1 class="cart-page-title">
+                    <i class="fas fa-shopping-bag"></i>
+                    Your Cart
+                </h1>
+            </div>
+
+            <!-- Dynamic Info Bar -->
+            <div class="cart-info-bar" id="cartInfoBar">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Cart Items -->
+            <div class="cart-page-items" id="cartPageItems">
+                <!-- Cart items will be populated here -->
+            </div>
+
+            <!-- Delivery Options -->
+            <div class="delivery-options">
+                <h3>
+                    <i class="fas fa-shipping-fast"></i>
+                    Delivery Options
+                </h3>
+                <div class="delivery-radio-group">
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery" value="standard" checked>
+                        <span class="radio-custom"></span>
+                        <div class="option-content">
+                            <div class="option-title">Standard Delivery (10 Days)</div>
+                            <div class="option-price">₹0</div>
+                        </div>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery" value="fast">
+                        <span class="radio-custom"></span>
+                        <div class="option-content">
+                            <div class="option-title">Fast Delivery (3–5 Days)</div>
+                            <div class="option-price">₹50</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery:</span>
+                    <span id="deliveryFee">₹0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="cartPageTotal">₹0</span>
+                </div>
+            </div>
+
+            <!-- Final Checkout Button -->
+            <button class="final-checkout-btn" id="finalCheckoutBtn" tabindex="0" aria-label="Proceed to DM">
+                <i class="fas fa-comments"></i>
+                💬 Proceed to DM
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar" aria-modal="true" role="dialog" tabindex="-1">
+        <div class="cart-header">
+            <h3>
+                <i class="fas fa-shopping-bag"></i>
+                Shopping Cart
+            </h3>
+            <button class="close-cart-btn" id="closeCartBtn" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p>Add some cute items to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <p>Total: ₹<span id="cartTotal">0.00</span></p>
+            </div>
+            <button class="proceed-to-cart-btn" id="proceedToCartBtn" tabindex="0" aria-label="Proceed to Cart">
+                <i class="fas fa-shopping-cart"></i>
+                💬 Proceed to Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="copyToast" role="status" aria-live="polite">📋 Paste the message in DM and send!</div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal" role="dialog" aria-modal="true" tabindex="-1">
+        <div class="modal-content">
+            <button class="close-modal-btn" onclick="closeProductModal()" aria-label="Close product modal">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="main-image">
+                        <img id="modalMainImage" src="" alt="">
+                    </div>
+                    <div class="thumbnail-images" id="modalThumbnails">
+                        <!-- Thumbnails will be populated here -->
+                    </div>
+                </div>
+
+                <div class="modal-info-section">
+                    <h2 id="modalProductName"></h2>
+                    <p class="modal-price" id="modalProductPrice"></p>
+                    <p class="modal-description" id="modalProductDescription"></p>
+
+                    <!-- Color Options -->
+                    <div class="color-options">
+                        <h4>Choose Color:</h4>
+                        <div class="color-swatches" id="modalColorOptions">
+                            <!-- Color options will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-section">
+                        <h4>Quantity:</h4>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeModalQuantity(-1)" tabindex="0" aria-label="Decrease quantity">-</button>
+                            <span class="quantity" id="modalQuantity">1</span>
+                            <button class="quantity-btn" onclick="changeModalQuantity(1)" tabindex="0" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="modal-add-to-cart-btn" id="modalAddToCartBtn" tabindex="0" aria-label="Add to Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
