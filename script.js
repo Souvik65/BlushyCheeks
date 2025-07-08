@@ -101,7 +101,7 @@ const productData = {
         category: 'gifts'
     },
     'NA009': {
-        name: 'Kawaii Hair Clip',
+        name: ' Hair Clip',
         price: 99,
         images: [
             'images/17.jpg'
@@ -111,7 +111,7 @@ const productData = {
         category: 'accessories'
     },
     'NA010': {
-        name: 'Kawaii Hair Clip',
+        name: ' Hair Clip',
         price: 149,
         images: [
             'images/17.jpg'
@@ -121,7 +121,7 @@ const productData = {
         category: 'accessories'
     },
     'NA011': {
-        name: 'Kawaii Hair Clip',
+        name: ' Hair Clip',
         price: 152,
         images: [
             'images/17.jpg'
@@ -131,7 +131,7 @@ const productData = {
         category: 'accessories'
     },
     'NA012': {
-        name: 'Kawaii Hair Clip',
+        name: ' Hair Clip',
         price: 99,
         images: [
             'images/17.jpg'
@@ -141,7 +141,7 @@ const productData = {
         category: 'accessories'
     },
     'NA013': {
-        name: 'Kawaii Hair Clip',
+        name: ' Hair Clip',
         price: 99,
         images: [
             'images/17.jpg'
@@ -151,7 +151,7 @@ const productData = {
         category: 'accessories'
     },
     'NA014': {
-        name: 'Kawaii Hair Clip',
+        name: ' Hair Clip',
         price: 99,
         images: [
             'images/17.jpg'
