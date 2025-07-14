@@ -18,8 +18,8 @@ const productData = {
         mrp: 399, // <--- Add this line for original MRP
         price: 249, // Offer price
         images: [
-            'images/13.jpg',
-            'images/2.jpg'
+            'images/a.jpg',
+            'images/l.jpg'
         ],
         colors: ['pink', 'blue', 'white'],
         description: 'Adorable handmade bear keychain perfect for bags, keys, or as a cute accessory. Made with soft, high-quality materials that are durable and long-lasting.',
@@ -30,8 +30,8 @@ const productData = {
         mrp: 499,
         price: 399,
         images: [
-            'images/3.jpg',
-            'images/4.jpg',
+            'images/b.jpg',
+            'images/c.jpg',
         ],
         colors: ['pink', 'purple', 'yellow', 'white'],
         description: 'Beautiful handcrafted crochet flower bouquet that never wilts. Perfect for home decoration or as a thoughtful gift for loved ones.',
@@ -41,7 +41,7 @@ const productData = {
         name: 'Pink Heart Ring',
         price: 179,
         images: [
-            'images/5.jpg',
+            'images/d.jpg',
             'images/6.jpg',
         ],
         colors: ['pink', 'blue', 'purple'],
@@ -52,8 +52,8 @@ const productData = {
         name: 'Cute Cat Plushie',
         price: 329,
         images: [
-            'images/7.jpg',
-            'images/8.jpg',
+            'images/e.jpg',
+            'images/f.jpg',
         ],
         colors: ['pink', 'white', 'blue', 'purple'],
         description: 'Soft and cuddly cat plushie made with premium materials. Perfect for hugging, decoration, or as a comfort companion.',
@@ -63,8 +63,8 @@ const productData = {
         name: 'Rainbow Keychain',
         price: 229,
         images: [
-            'images/10.jpg',
-            'images/18.jpg'
+            'images/g.jpg',
+            'images/h.jpg'
         ],
         colors: ['yellow', 'pink', 'blue', 'green'],
         description: 'Colorful rainbow keychain that brings joy and positivity wherever you go. Handmade with vibrant colors and quality craftsmanship.',
@@ -74,7 +74,7 @@ const productData = {
         name: 'Crochet Bookmark',
         price: 129,
         images: [
-            'images/18.jpg',
+            'images/9.jpg',
             'images/10.jpg'
         ],
         colors: ['pink', 'blue', 'purple', 'green'],

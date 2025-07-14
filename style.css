@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
     line-height: 1.6;
     background: linear-gradient(135deg, #ffeef8 0%, #fff5f8 100%);
     color: #5a4a5a;
@@ -466,7 +467,9 @@ body {
 }
 
 .section-title {
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
+    font-size: clamp(1.5rem, calc(8vw + 1rem), 5.5rem);
+
     font-weight: 700;
     text-align: center;
     margin: 40px 0 32px;
