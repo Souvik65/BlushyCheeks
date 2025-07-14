@@ -15,11 +15,10 @@ let allProductsFilter = null;
 const productData = {
     'NA001': {
         name: 'Cute Bear kj Keychain',
-        mrp: 399, // <--- Add this line for original MRP
-        price: 249, // Offer price
+        price: 249,
         images: [
-            'images/a.jpg',
-            'images/l.jpg'
+            'images/13.jpg',
+            'images/2.jpg'
         ],
         colors: ['pink', 'blue', 'white'],
         description: 'Adorable handmade bear keychain perfect for bags, keys, or as a cute accessory. Made with soft, high-quality materials that are durable and long-lasting.',
@@ -27,7 +26,6 @@ const productData = {
     },
     'NA002': {
         name: 'Crochet Flower Bouquet',
-        mrp: 499,
         price: 399,
         images: [
             'images/b.jpg',
@@ -408,11 +406,6 @@ function setModalAccessibility(modal) {
 // --- Product Card Event Delegation, Loader, and Accessibility ---
 
 function productCardHtml(id, product) {
-    // Check if MRP is present and different from offer price
-    const priceHtml = product.mrp && product.mrp > product.price
-        ? `<span class="mrp">₹${product.mrp}</span> <span class="offer-price">₹${product.price}</span>`
-        : `<span class="offer-price">₹${product.price}</span>`;
-
     return `
     <div class="product-card" data-id="${id}" tabindex="0" aria-label="Open quick view for ${product.name}">
         <div class="product-image">
@@ -423,7 +416,7 @@ function productCardHtml(id, product) {
         </div>
         <div class="product-info">
             <h3>${product.name}</h3>
-            <p class="price">${priceHtml}</p>
+            <p class="price">₹${product.price}</p>
             <button class="add-to-cart-btn" data-action="add-to-cart" data-id="${id}" tabindex="0" aria-label="Add ${product.name} to cart">
                 <i class="fas fa-shopping-cart"></i>
                 Add to Cart

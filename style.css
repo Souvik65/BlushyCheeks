@@ -77,54 +77,12 @@ body {
     gap: 20px;
 }
 
-/* Logo */
-
+/* Logo
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-/* @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  14% { transform: scale(1.18); }
-  28% { transform: scale(1); }
-  42% { transform: scale(1.13); }
-  70% { transform: scale(1); }
-}
-
-.logo-img {
-  animation: heartbeat 1.6s ease-in-out infinite;
-  display: inline-block;
 } */
-
-/* make the logo animate */
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-7deg); }
-  25% { transform: rotate(7deg); }
-  50% { transform: rotate(-7deg); }
-  75% { transform: rotate(7deg); }
-}
-
-.logo-img {
-  animation: wiggle 1.2s ease-in-out infinite;
-  display: inline-block;
-}
-
-.logo-text {
-    font-family: 'Dancing Script', cursive;
-    font-size: 28px;
-    font-weight: bolder; 
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, #ff9a9e, #f093fb);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #ff9a9e; /* fallback for non-webkit browsers */
-    display: inline-block;
-    line-height: 1;
-    
-}
 
 .logo h1 {
     font-family: 'Dancing Script', cursive;
@@ -136,10 +94,10 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* .logo span {
+.logo span {
     font-size: 20px;
     animation: sparkle 2s ease-in-out infinite;
-} */
+}
 
 @keyframes sparkle {
     0%, 100% { transform: scale(1) rotate(0deg); }
@@ -511,21 +469,6 @@ body {
         grid-template-columns: 1fr;
         gap: 14px;
     }
-}
-
-/* Price Tag Styles */
-.mrp { 
-    text-decoration: line-through;
-    color: #888;
-    font-size: 1rem;
-    margin-right: 7px;
-    font-weight: 500;
-}
-
-.offer-price {
-    color: #ff9a9e;
-    font-size: 1.15rem;
-    font-weight: 700;
 }
 
 /* Product Card */
@@ -1808,7 +1751,7 @@ body {
 
 .footer-section h3 {
     font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .footer-section p {
@@ -1993,7 +1936,7 @@ body {
 }
 
 /* Make Footer, Modal, Banner, Cart, and Grids Mobile Friendly */
-@media (max-width: 600px),(min-with: 600px) {
+@media (max-width: 600px) {
     .container {
         padding: 0 8px;
     }
@@ -2164,11 +2107,6 @@ body {
         grid-template-columns: 1fr 1fr;  /* Always 2 columns for 480px and below */
         gap: 10px;
     }
-    .footer-section h3 {    
-        font-size: 4rem;
-
-    }
-
 }
 
 @media (max-width: 425px) {
