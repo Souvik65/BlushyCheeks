@@ -1110,7 +1110,7 @@ body {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
-    max-height: fit-content;
+    /* max-height: fit-content; */
 }
 
 .empty-cart {
