@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blushy Cheeks </title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+     <!-- Only load used font weights! -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/DSC_1.webp">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,7 +31,7 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="#home">
-                    <img src="images/logo.png" alt="BlushyCheeks Logo" class="logo-img" loading="lazy"><span class="logo-text">Blushy Cheeks</span>
+                    <img src="images/logo.png" width="800" height="500" alt="BlushyCheeks Logo" class="logo-img" loading="lazy"><span class="logo-text">Blushy Cheeks</span>
                 </a>
                 <!-- <h1>BlushyCheeks</h1> -->
                 <!-- <span>✨</span> -->
@@ -100,7 +101,7 @@
         <section class="banner" id="home">
             <div class="banner-slider">
                 <div class="banner-slide active">
-                    <img src="images/a.jpg" alt="Cute Keychain" loading="lazy" >
+                    <img src="images/DSC_1.webp" width="800" height="500" alt="Cute Keychain" loading="lazy" >
                     <div class="banner-content">
                         <h2>Adorable Keychains Collection</h2>
                         <p>Starting from ₹199</p>
@@ -108,7 +109,7 @@
                     </div>
                 </div>
                 <div class="banner-slide">
-                    <img src="images/21.jpg" alt="Crochet Items" loading="lazy" >
+                    <img src="images/DSC_2.webp"width="800" height="500" alt="Crochet Items" loading="lazy" >
                     <div class="banner-content">
                         <h2>Handmade Crochet Items</h2>
                         <p>Starting from ₹299</p>
@@ -116,7 +117,7 @@
                     </div>
                 </div>
                 <div class="banner-slide">
-                    <img src="images/17.jpg" alt="Cute Rings" loading="lazy" >
+                    <img src="images/17.jpg" width="800" height="500" alt="Cute Rings" loading="lazy" >
                     <div class="banner-content">
                         <h2>Aesthetic Ring Collection</h2>
                         <p>Starting from ₹149</p>
@@ -158,37 +159,37 @@
                         <div class="category-icon"><i class="fas fa-cut"></i></div>
                         <h3>Crochet</h3>
                         <p>Handmade with love</p>
-                        <button class="category-btn" tabindex="0" aria-label="Shop Crochet">Shop Crochet</button>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Crochet">Shop Now</button>
                     </div>
                     <div class="category-card" data-category="keychains" tabindex="0" aria-label="Shop keychains">
                         <div class="category-icon"><i class="fas fa-key"></i></div>
                         <h3>Keychains</h3>
                         <p>Cute & functional</p>
-                        <button class="category-btn" tabindex="0" aria-label="Shop Keychains">Shop Keychains</button>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Keychains">Shop Now</button>
                     </div>
                     <div class="category-card" data-category="rings" tabindex="0" aria-label="Shop rings">
                         <div class="category-icon"><i class="fas fa-ring"></i></div>
                         <h3>Rings</h3>
                         <p>Aesthetic jewelry</p>
-                        <button class="category-btn" tabindex="0" aria-label="Shop Rings">Shop Rings</button>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Rings">Shop Now</button>
                     </div>
                     <div class="category-card" data-category="cute-decor" tabindex="0" aria-label="Shop cute decor">
                         <div class="category-icon"><i class="fas fa-home"></i></div>
                         <h3>Cute Decor</h3>
                         <p>Home sweetness</p>
-                        <button class="category-btn" tabindex="0" aria-label="Shop Decor">Shop Decor</button>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Decor">Shop Now</button>
                     </div>
                     <div class="category-card" data-category="gifts" tabindex="0" aria-label="Shop gifts">
                         <div class="category-icon"><i class="fas fa-gift"></i></div>
                         <h3>Gifts</h3>
                         <p>Perfect presents</p>
-                        <button class="category-btn" tabindex="0" aria-label="Shop Gifts">Shop Gifts</button>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Gifts">Shop Now</button>
                     </div>
                     <div class="category-card" data-category="accessories" tabindex="0" aria-label="Shop accessories">
                         <div class="category-icon"><i class="fas fa-gem"></i></div>
                         <h3>Accessories</h3>
                         <p>Complete the look</p>
-                        <button class="category-btn" tabindex="0" aria-label="Shop Accessories">Shop Accessories</button>
+                        <button class="category-btn" tabindex="0" aria-label="Shop Accessories">Shop Now</button>
                     </div>
                 </div>
             </div>
@@ -413,7 +414,7 @@
             <div class="modal-body">
                 <div class="modal-image-section">
                     <div class="main-image">
-                        <img id="modalMainImage" src="" alt="">
+                        <img id="modalMainImage" width="800" height="500" src="" alt="" loading="lazy">
                     </div>
                     <div class="thumbnail-images" id="modalThumbnails">
                         <!-- Thumbnails will be populated here -->
@@ -456,6 +457,6 @@
     <!-- Product Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

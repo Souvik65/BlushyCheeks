@@ -13,149 +13,204 @@ let allProductsFilter = null;
 
 // Product data with enhanced details and categories
 const productData = {
-    'NA001': {
+    'C001': {
         name: 'Cute Bear kj Keychain',
         mrp: 399, // <--- Add this line for original MRP
         price: 249, // Offer price
         images: [
-            'images/a.jpg',
+            'images/C001.webP',
             'images/l.jpg'
         ],
         colors: ['pink', 'blue', 'white'],
         description: 'Adorable handmade bear keychain perfect for bags,',
         category: 'keychains'
     },
-    'NA002': {
+    'C002': {
         name: 'Crochet Flower Bouquet',
         mrp: 499,
         price: 399,
         images: [
-            'images/b.jpg',
-            'images/c.jpg',
+            'images/C002.webp',
+            'images/C002.1.webp',
         ],
         colors: ['pink', 'purple', 'yellow', 'white'],
         description: 'Beautiful handcrafted crochet flower bouquet that never wilts. Perfect for home decoration or as a thoughtful gift for loved ones.',
         category: 'crochet'
     },
-    'NA003': {
+    'C003': {
         name: 'Pink Heart Ring',
         price: 179,
         images: [
-            'images/d.jpg',
+            'images/C003.webp',
             'images/6.jpg',
         ],
         colors: ['pink', 'blue', 'purple'],
         description: 'Cute heart-shaped ring with a sweet aesthetic design. Adjustable size fits most fingers comfortably. Perfect for everyday wear or special occasions.',
         category: 'rings'
     },
-    'NA004': {
+    'C004': {
         name: 'Cute Cat Plushie',
         price: 329,
         images: [
-            'images/e.jpg',
-            'images/f.jpg',
+            'images/C004.webp',
+            'images/C004.1.webp',
         ],
         colors: ['pink', 'white', 'blue', 'purple'],
         description: 'Soft and cuddly cat plushie made with premium materials. Perfect for hugging, decoration, or as a comfort companion.',
         category: 'cute-decor'
     },
-    'NA005': {
+    'C005': {
         name: 'Rainbow Keychain',
         price: 229,
         images: [
-            'images/g.jpg',
-            'images/h.jpg'
+            'images/C005.webp',
+            'images/C005.1.webp'
         ],
         colors: ['yellow', 'pink', 'blue', 'green'],
         description: 'Colorful rainbow keychain that brings joy and positivity wherever you go. Handmade with vibrant colors and quality craftsmanship.',
         category: 'keychains'
     },
-    'NA006': {
+    'C006': {
         name: 'Crochet Bookmark',
         price: 129,
         images: [
-            'images/j.jpg',
-            'images/k.jpg'
+            'images/C006.webp',
+            'images/C006.1.webp',
+            'images/C006.2.webp',
+            'images/C006.3.webp'
         ],
         colors: ['pink', 'blue', 'purple', 'green'],
         description: 'Handcrafted crochet bookmark perfect for book lovers. Features intricate patterns and a cute tassel design.',
         category: 'crochet'
     },
-    'NA007': {
+    'C007': {
         name: 'Fluffy Bunny Plushie',
         price: 479,
         images: [
-            'images/i.jpg'
+            'images/C007.webp',
+            'images/C007.1.webp'
         ],
         colors: ['white', 'pink'],
         description: 'Soft bunny plushie for cuddles and decor.',
         category: 'cute-decor'
     },
-    'NA008': {
+    'C008': {
         name: 'Pastel Gift Box',
         price: 350,
         images: [
-            'images/21.jpg'
+            'images/C008.webp'
         ],
         colors: ['pink', 'yellow'],
         description: 'Perfect for gifting any occasion.',
         category: 'gifts'
     },
-    'NA009': {
+    'C009': {
         name: ' Hair Clip',
         price: 99,
         images: [
-            'images/17.jpg'
+            'images/C009.webp',
+            'images/C009.1.webp',
+            'images/C009.2.webp'
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
     },
-    'NA010': {
+    'C010': {
         name: ' Hair Clip',
         price: 149,
         images: [
-            'images/17.jpg'
+            'images/C010.webp',
+            'images/C010.1.webp',
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
     },
-    'NA011': {
+    'C011': {
         name: ' Hair Clip',
         price: 152,
         images: [
-            'images/17.jpg'
+            'images/C011.webp',
+            'images/C011.1.webp',
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
     },
-    'NA012': {
+    'C012': {
         name: ' Hair Clip',
         price: 99,
         images: [
-            'images/17.jpg'
+            'images/C012.webp'
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
     },
-    'NA013': {
+    'C013': {
         name: ' Hair Clip',
         price: 99,
         images: [
-            'images/17.jpg'
+            'images/C013.webp'
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
     },
-    'NA014': {
+    'C014': {
         name: ' Hair Clip',
         price: 99,
         images: [
-            'images/17.jpg'
+            'images/C014.webp',
+            'images/C014.1.webp',
+            'images/C014.2.webp'
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C015': {
+        name: ' Hair Clip',
+        price: 99,
+        images: [
+            'images/C015.webp',
+            'images/C015.1.webp'
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C016': {
+        name: ' Hair Clip',
+        price: 99,
+        images: [
+            'images/C016.webp',
+            'images/C016.1.webp',
+            'images/C016.2.webp'
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C017': {
+        name: ' Hair Clip',
+        price: 99,
+        images: [
+            'images/C017.webp',
+            
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C018': {
+        name: ' Hair Clip',
+        price: 99,
+        images: [
+            'images/C018.webp',
+            'images/C018.1.webp',
+            
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
@@ -634,7 +689,7 @@ function updateCartDisplay() {
     } else {
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}" >
+                <img src="${item.image}" alt="${item.name}" loading="lazy">
                 <div class="cart-item-info">
                     <h4>${item.name}</h4>
                     <div class="cart-item-details">Color: ${item.color}</div>
@@ -673,7 +728,7 @@ function updateCartPageDisplay() {
     } else {
         cartPageItems.innerHTML = cart.map(item => `
             <div class="cart-page-item">
-                <img src="${item.image}" alt="${item.name}" >
+                <img src="${item.image}" alt="${item.name}" loading="lazy">
                 <div class="cart-page-item-info">
                     <h3>${item.name}</h3>
                     <div class="cart-page-item-details">Color: ${item.color} | ID: ${item.originalId}</div>
@@ -719,15 +774,20 @@ function handleFinalCheckout() {
         `${item.originalId}(${item.quantity})(${item.color})`
     ).join(', ');
     const deliveryText = selectedDelivery === 'fast' ? 'Fast (3–5 Days)' : 'Standard (10 Days)';
-    const message = `I want to buy: [${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}`;
+    const message = `HI Blushy Cheeks, I want to buy: [${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
-    const instagramDMURL = `https://www.instagram.com/anushka.this.sidee/`;
+
+    // Your WhatsApp number in international format, without '+'
+    const whatsappNumber = "918794387293";
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     navigator.clipboard.writeText(message)
         .then(() => {
-            showToast('📋 Message copied to clipboard! Paste the message to Instagram. Redirecting to Instagram DM...');
+            showToast('📋 Message copied to clipboard! Redirecting to WhatsApp DM...');
             setTimeout(() => {
-                window.open(instagramDMURL, '_blank');
+                // Set flag to clear cart on return
+                localStorage.setItem('clearCartOnReturn', 'yes');
+                window.open(whatsappURL, '_blank');
             }, 3500);
         })
         .catch(() => {
@@ -863,9 +923,9 @@ function populatePriceOptions() {
         </div>
         <div class="price-card">
             <div class="price-icon"><i class="fas fa-money-bill-wave"></i></div>
-            <h3>All Collection</h3>
+            <h3>Collection</h3>
             <p>watch out our all collection</p>
-            <button onclick="showAllCollection()">Show all</button>
+            <button class="btn" onclick="showAllCollection()">Show all</button>
         </div>
     `;
 }
@@ -1045,3 +1105,16 @@ window.updateQuantity = updateQuantity;
 window.removeFromCart = removeFromCart;
 window.showAllCollection = showAllCollection;
 window.viewMoreAllProducts = viewMoreAllProducts;
+
+
+
+window.addEventListener('focus', function() {
+    if (localStorage.getItem('clearCartOnReturn') === 'yes') {
+        cart = [];
+        updateCartDisplay();
+        updateCartPageDisplay();
+        saveCart();
+        localStorage.removeItem('clearCartOnReturn');
+        showToast('Your cart has been cleared. Thank you for shopping!');
+    }
+});
