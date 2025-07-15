@@ -130,7 +130,7 @@ body {
     color: #ff9a9e; /* fallback for non-webkit browsers */
     display: inline-block;
     line-height: 1;
-    vertical-align: middle;
+    vertical-align: middle !important;
     padding-left: 20px;
 
     
@@ -2215,6 +2215,7 @@ body {
     }
     .logo-text{
         font-size: 1.2rem;
+        vertical-align: middle !important;
     }
 }
 
@@ -2227,6 +2228,7 @@ body {
   }
   .logo-text {
     font-size: 1rem;
+    vertical-align: middle !important;
   }
 
   
