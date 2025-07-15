@@ -22,7 +22,7 @@ const productData = {
             'images/l.jpg'
         ],
         colors: ['pink', 'blue', 'white'],
-        description: 'Adorable handmade bear keychain perfect for bags, keys, or as a cute accessory. Made with soft, high-quality materials that are durable and long-lasting.',
+        description: 'Adorable handmade bear keychain perfect for bags,',
         category: 'keychains'
     },
     'NA002': {
