@@ -124,7 +124,7 @@ const productData = {
         price: 129,
         images: [
             'images/C005.webp',
-            'images/C005.1.webp'
+            
         ],
         colors: ['yellow', 'pink', 'blue', 'green'],
         description: 'Colorful rainbow keychain that brings joy and positivity wherever you go. Handmade with vibrant colors and quality craftsmanship.',
