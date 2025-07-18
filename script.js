@@ -293,8 +293,8 @@ const productData = {
         mrp: 169,
         price: 139,
         images: [
-            'images/C019.webp',
-            'images/C019.1.webp',
+            'images/C019.jpg',
+            'images/C019.1.jpg'
 
         ],
         colors: ['blue', 'pink'],
@@ -306,8 +306,8 @@ const productData = {
         mrp: 150,
         price: 99,
         images: [
-            'images/C019.webp',
-            'images/C019.1.webp',
+            'images/C019.jpg',
+            'images/C019.1.jpg',
 
         ],
         colors: ['blue', 'pink'],
@@ -332,7 +332,7 @@ const productData = {
         mrp: 175,
         price: 149,
         images: [
-            'images/C022.webp'
+            'images/C022.jpg',
             
 
         ],
@@ -345,7 +345,7 @@ const productData = {
         mrp: 175,
         price: 149,
         images: [
-            'images/C023.webp'
+            'images/C023.jpg',
             
 
         ],
@@ -358,8 +358,8 @@ const productData = {
         mrp: 169,
         price: 149,
         images: [
-            'images/C024.webp',
-            'images/C024.1.webp'
+            'images/C024.jpg',
+            'images/C024.1.jpg',
             
 
         ],
@@ -372,8 +372,8 @@ const productData = {
         mrp: 199,
         price: 179,
         images: [
-            'images/C025.webp',
-            'images/C025.1.webp'
+            'images/C025.jpg',
+            'images/C025.1.jpg',
             
 
         ],
@@ -386,7 +386,7 @@ const productData = {
         mrp: 165,
         price: 145,
         images: [
-            'images/C026.webp',
+            'images/C026.jpg',
             
             
 
@@ -400,8 +400,8 @@ const productData = {
         mrp: 155,
         price: 129,
         images: [
-            'images/C027.webp',
-            'images/C027.1.webp',
+            'images/C027.jpg',
+            'images/C027.1.jpg',
             
             
 
@@ -415,8 +415,8 @@ const productData = {
         mrp: 235,
         price: 199,
         images: [
-            'images/C028.webp',
-            'images/C028.1.webp',
+            'images/C028.jpg',
+            'images/C028.1.jpg',
             
             
 
@@ -430,9 +430,9 @@ const productData = {
         mrp: 329,
         price: 289,
         images: [
-            'images/C029.webp',
-            'images/C029.1.webp',
-            'images/C029.2.webp',
+            'images/C029.jpg',
+            'images/C029.1.jpg',
+            'images/C029.2.jpg',
             
             
 
@@ -446,8 +446,8 @@ const productData = {
         mrp: 189,
         price: 169,
         images: [
-            'images/C030.webp',
-            'images/C030.1.webp',
+            'images/C030.jpg',
+            'images/C030.1.jpg',
             
             
 
@@ -461,7 +461,7 @@ const productData = {
         mrp: 135,
         price: 199,
         images: [
-            'images/C031.webp',
+            'images/C031.jpg',
             
             
             
@@ -476,7 +476,7 @@ const productData = {
         mrp: 213,
         price: 189,
         images: [
-            'images/C031.webp',
+            'images/C031.jpg',
             
             
             
