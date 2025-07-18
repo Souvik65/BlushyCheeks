@@ -1005,7 +1005,7 @@ function updateCartDisplay() {
 }
 function updateCartPageDisplay() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const delivery = selectedDelivery === 'fast' ? 50 : 0;
+    const delivery = selectedDelivery === 'fast' ? 99 : 60;
     const total = subtotal + delivery;
     updateCartInfoBar(subtotal);
     if (cart.length === 0) {
@@ -1068,7 +1068,7 @@ function handleFinalCheckout() {
     const itemsList = cart.map(item =>
         `${item.originalId}(${item.quantity})(${item.color})`
     ).join(', ');
-    const deliveryText = selectedDelivery === 'fast' ? 'Fast (3–5 Days)' : 'Standard (10 Days)';
+    const deliveryText = selectedDelivery === 'fast' ? 'Fast (3–5 Days)' : 'Standard (5-10 Days)';
     const message = `HI Blushy Cheeks, I want to buy: [${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}`;
     const encodedMessage = encodeURIComponent(message);
 
@@ -1325,6 +1325,8 @@ function openCategoryPage(categoryKey) {
 }
 
 // --- Cart Info Bar with cute dark pink theme ---
+// Updated: Always shows how much required for Free Gift and Free Shipping
+
 function updateCartInfoBar(subtotal) {
     const bar = document.getElementById('cartInfoBar');
     if (!bar) return;
@@ -1334,6 +1336,7 @@ function updateCartInfoBar(subtotal) {
     const rsToShipping = Math.max(0, freeShippingAt - subtotal);
     let progress = Math.min(subtotal / freeShippingAt, 1);
     let barWidth = Math.floor(progress * 100);
+
     let infoHtml = `
         <div class="cart-info-progress-bar">
             <div class="cart-info-progress" style="width:${barWidth}%;"></div>
@@ -1344,22 +1347,21 @@ function updateCartInfoBar(subtotal) {
             <span>₹${freeShippingAt}</span>
         </div>
     `;
-    if (subtotal < freeGiftAt) {
-        infoHtml += `<div>
-            Add items worth <span class="highlight-text">₹${rsToGift.toFixed(2)}</span> for a <span class="free-link" onclick="filterAllProductsByPrice('150-400')">FREE Gift</span> and <span class="free-link" onclick="filterAllProductsByPrice('above-400')">FREE Delivery</span>.
-            <span class="view-products-link" onclick="document.getElementById('all-products').scrollIntoView({behavior:'smooth'});">View Products ›</span>
-        </div>`;
-    } else if (subtotal < freeShippingAt) {
-        infoHtml += `<div>
-            You got a <span class="free-link">FREE Gift!</span>
-            Add items worth <span class="highlight-text">₹${rsToShipping.toFixed(2)}</span> for <span class="free-link" onclick="filterAllProductsByPrice('above-400')">FREE Delivery</span>.
-            <span class="view-products-link" onclick="document.getElementById('all-products').scrollIntoView({behavior:'smooth'});">View Products ›</span>
-        </div>`;
-    } else {
-        infoHtml += `<div>
-            <span class="free-link">FREE Gift</span> & <span class="free-link">FREE Delivery</span> Unlocked!
-        </div>`;
-    }
+
+    // Always show how much required for both Free Gift and Free Shipping
+    let giftText = rsToGift > 0
+        ? `Add items worth <span class="highlight-text">₹${rsToGift.toFixed(2)}</span> for a <span class="free-link" onclick="filterAllProductsByPrice('150-400')">FREE Gift</span>`
+        : `<span class="free-link">FREE Gift</span> Unlocked!`;
+
+    let shippingText = rsToShipping > 0
+        ? `Add items worth <span class="highlight-text">₹${rsToShipping.toFixed(2)}</span> for <span class="free-link" onclick="filterAllProductsByPrice('above-799')">FREE Delivery</span>`
+        : `<span class="free-link">FREE Delivery</span> Unlocked!`;
+
+    infoHtml += `<div>
+        ${giftText} and ${shippingText}.
+        <span class="view-products-link" onclick="document.getElementById('all-products').scrollIntoView({behavior:'smooth'});"></span>
+    </div>`;
+
     bar.innerHTML = infoHtml;
 }
 
