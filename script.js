@@ -763,6 +763,31 @@ function updateCartDisplay() {
             </div>
         `).join('');
         cartFooter.style.display = 'block';
+
+        // ---- New logic for minimum cart value ----
+        // Remove previous warning if exists
+        let minValEl = document.getElementById('minCartValueWarn');
+        if (minValEl) minValEl.remove();
+
+        // Get the proceed button
+        if (proceedToCartBtn) {
+            if (totalPrice < 199) {
+                proceedToCartBtn.disabled = true;
+                proceedToCartBtn.classList.add("disabled-proceed");
+                // Insert warning message above the button
+                const warnEl = document.createElement("div");
+                warnEl.id = "minCartValueWarn";
+                warnEl.textContent = "Minimum cart value is Rs 199";
+                warnEl.className = "min-cart-value-warn";
+                // Insert before the button in cartFooter
+                cartFooter.insertBefore(warnEl, proceedToCartBtn);
+            } else {
+                proceedToCartBtn.disabled = false;
+                proceedToCartBtn.classList.remove("disabled-proceed");
+                let prevWarn = document.getElementById('minCartValueWarn');
+                if (prevWarn) prevWarn.remove();
+            }
+        }
     }
 }
 function updateCartPageDisplay() {

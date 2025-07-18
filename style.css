@@ -304,6 +304,34 @@ body {
     transform: scale(1.1);
 } */
 
+/* Minimum Cart Value Warning */
+.min-cart-value-warn {
+    color: #ff6b6b;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    background: none;
+    padding: 0;
+    letter-spacing: 0.2px;
+}
+
+/* Disabled proceed button style */
+.proceed-to-cart-btn.disabled-proceed {
+    opacity: 0.7;
+    pointer-events: none;
+    background: linear-gradient(135deg, #eee, #ffb3d9);
+    color: #fff;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
 .cart-container {
     position: relative;
 }
@@ -849,6 +877,7 @@ body {
 }
 
 /* Cute Back Button for Category Pages */
+.continue-shopping-btn,
 .cute-back-btn {
     display: inline-flex;
     align-items: center;
@@ -867,14 +896,19 @@ body {
     transition: all 0.2s;
     outline: none;
 }
+.continue-shopping-btn:hover,
 .cute-back-btn:hover {
     background: linear-gradient(135deg, #ff7eb3, #ff758c);
     transform: translateY(-2px) scale(1.04);
     box-shadow: 0 6px 24px rgba(255, 154, 158, 0.17);
 }
+.continue-shopping-btn i,
 .cute-back-btn i {
     font-size: 1.1em;
 }
+
+
+
 
 .category-page-header {
     display: flex;
