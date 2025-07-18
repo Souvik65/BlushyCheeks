@@ -22,8 +22,8 @@
         </div>
     </div> -->
 
-    <!-- Preloader: Animated crochet yarn ball and longer, thinner needle (based on user image) -->
-    <div id="preloader" style="position: fixed; inset: 0; background: #fff5f8; z-index: 99999; display: flex; align-items: center; justify-content: center;">
+    <!-- Preloader: Animated yarn ball and longer, thinner needle (based on user image) with smooth closing animation -->
+    <div id="preloader" style="position: fixed; inset: 0; background: #fff5f8; z-index: 99999; display: flex; align-items: center; justify-content: center; transition: opacity 0.7s cubic-bezier(.55,0,.1,1), transform 0.7s cubic-bezier(.55,0,.1,1);">
     <div style="text-align: center;">
         <!-- SVG traced and stylized from user image reference ![image1](image1) -->
         <svg id="crochet-preloader-svg" viewBox="0 0 400 220" width="160" height="88" style="display:block; margin:auto;">
@@ -54,12 +54,11 @@
         <circle cx="255" cy="135" r="2.8" fill="#fff6fa" opacity="0.7"/>
         <circle cx="125" cy="165" r="2.1" fill="#fff6fa" opacity="0.6"/>
         </svg>
-        <div style="font-family:'Poppins', sans-serif; font-size:1.5rem; color:#ff4da6; margin-top: 14px;">
+        <div style="font-family:'Dancing Script',cursive; font-size:1.5rem; color:#ff6eb6; margin-top: 14px;">
         Crocheting a little cuteness…
         </div>
     </div>
     </div>
-
 
 
 

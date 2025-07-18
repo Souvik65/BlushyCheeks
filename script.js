@@ -11,59 +11,61 @@ let currentAllProductsOffset = 0;
 const ALL_PRODUCTS_LOAD_COUNT = 9;
 let allProductsFilter = null;
 
-// Animate needle: gentle poking motion
-document.getElementById('needle-group').animate([
+  // Animate needle: gentle poking motion
+  document.getElementById('needle-group').animate([
     { transform: 'rotate(-8deg)' },
     { transform: 'rotate(-18deg) translateY(12px)' },
     { transform: 'rotate(-8deg)' }
-], {
+  ], {
     duration: 1200,
     iterations: Infinity
-});
+  });
 
-// Animate yarn balls: gentle bounce
-document.getElementById('yarn-left').animate([
+  // Animate yarn balls: gentle bounce
+  document.getElementById('yarn-left').animate([
     { transform: 'translateY(0)' },
     { transform: 'translateY(-7px)' },
     { transform: 'translateY(0)' }
-], {
+  ], {
     duration: 1200,
     iterations: Infinity
-});
-document.getElementById('yarn-right').animate([
+  });
+  document.getElementById('yarn-right').animate([
     { transform: 'translateY(0)' },
     { transform: 'translateY(-5px)' },
     { transform: 'translateY(0)' }
-], {
+  ], {
     duration: 1100,
     iterations: Infinity
-});
+  });
 
-// Animate yarn tail: wiggle
-document.getElementById('yarn-tail').animate([
+  // Animate yarn tail: wiggle
+  document.getElementById('yarn-tail').animate([
     { transform: 'translateX(0)' },
     { transform: 'translateX(-8px)' },
     { transform: 'translateX(0)' }
-], {
-    duration: 1200, 
+  ], {
+    duration: 1200,
     iterations: Infinity
-});
-document.getElementById('yarn-tail-right').animate([
+  });
+  document.getElementById('yarn-tail-right').animate([
     { transform: 'translateX(0)' },
     { transform: 'translateX(10px)' },
     { transform: 'translateX(0)' }
-], {
-    duration: 1200, 
+  ], {
+    duration: 1200,
     iterations: Infinity
-});
+  });
 
-// Remove preloader after 2 seconds
-setTimeout(function () {
-    document.getElementById('preloader').style.opacity = '0';
+  // Smooth closing animation (opacity + scale down)
+  setTimeout(function () {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.transform = 'scale(0.95)';
     setTimeout(function () {
-        document.getElementById('preloader').style.display = 'none';
-    }, 400);
-}, 2500);
+      preloader.style.display = 'none';
+    }, 800); // matches transition duration
+  }, 2000);
 
 
 // Product data with enhanced details and categories
