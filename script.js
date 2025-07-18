@@ -71,35 +71,37 @@ let allProductsFilter = null;
 // Product data with enhanced details and categories
 const productData = {
     'C001': {
-        name: 'Cute Bear kj Keychain',
-        mrp: 399, // <--- Add this line for original MRP
+        name: 'Rabbit With Heart Keychain',
+        mrp: 289, // <--- Add this line for original MRP
         price: 249, // Offer price
         images: [
             'images/C001.webP',
-            'images/l.jpg'
+            'images/C001.l.webP',
         ],
         colors: ['pink', 'blue', 'white'],
         description: 'Adorable handmade bear keychain perfect for bags,',
         category: 'keychains'
     },
     'C002': {
-        name: 'Crochet Flower Bouquet',
-        mrp: 499,
-        price: 399,
+        name: 'Strawberry Cow Keychain',
+        mrp: 289,
+        price: 249,
         images: [
             'images/C002.webp',
+            'images/C002.2.webp',
             'images/C002.1.webp',
         ],
         colors: ['pink', 'purple', 'yellow', 'white'],
         description: 'Beautiful handcrafted crochet flower bouquet that never wilts. Perfect for home decoration or as a thoughtful gift for loved ones.',
-        category: 'crochet'
+        category: 'keychains'
     },
     'C003': {
-        name: 'Pink Heart Ring',
-        price: 179,
+        name: 'Miffy keychain',
+        mrp:235,
+        price: 199,
         images: [
             'images/C003.webp',
-            'images/6.jpg',
+            'images/C003.1.jpg',
         ],
         colors: ['pink', 'blue', 'purple'],
         description: 'Cute heart-shaped ring with a sweet aesthetic design. Adjustable size fits most fingers comfortably. Perfect for everyday wear or special occasions.',
@@ -117,8 +119,9 @@ const productData = {
         category: 'cute-decor'
     },
     'C005': {
-        name: 'Rainbow Keychain',
-        price: 229,
+        name: 'Cherry keychain',
+        mrp: 155,
+        price: 129,
         images: [
             'images/C005.webp',
             'images/C005.1.webp'
@@ -128,8 +131,9 @@ const productData = {
         category: 'keychains'
     },
     'C006': {
-        name: 'Crochet Bookmark',
-        price: 129,
+        name: 'Rabbit lipbalm pouch (pink)',
+        mrp: 213,
+        price: 175,
         images: [
             'images/C006.webp',
             'images/C006.1.webp',
@@ -141,8 +145,9 @@ const productData = {
         category: 'crochet'
     },
     'C007': {
-        name: 'Fluffy Bunny Plushie',
-        price: 479,
+        name: 'Mashroom lipbalm pouch (red)',
+        mrp: 199,
+        price: 159,
         images: [
             'images/C007.webp',
             'images/C007.1.webp'
@@ -152,8 +157,9 @@ const productData = {
         category: 'cute-decor'
     },
     'C008': {
-        name: 'Pastel Gift Box',
-        price: 350,
+        name: 'White flower clip',
+        mrp: 199,
+        price: 165,
         images: [
             'images/C008.webp'
         ],
@@ -162,8 +168,9 @@ const productData = {
         category: 'gifts'
     },
     'C009': {
-        name: ' Hair Clip',
-        price: 99,
+        name: ' Daisy Hair Clip (Small)',
+        mrp: 65,
+        price: 49,
         images: [
             'images/C009.webp',
             'images/C009.1.webp',
@@ -174,7 +181,8 @@ const productData = {
         category: 'accessories'
     },
     'C010': {
-        name: ' Hair Clip',
+        name: 'Daisy Hair Clip ',
+        mrp: 179,
         price: 149,
         images: [
             'images/C010.webp',
@@ -185,21 +193,25 @@ const productData = {
         category: 'accessories'
     },
     'C011': {
-        name: ' Hair Clip',
-        price: 152,
+        name: 'Sunflower Hair Clip',
+        mrp: 179,
+        price: 149,
         images: [
             'images/C011.webp',
             'images/C011.1.webp',
+            'images/C011.2.webp'
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
     },
     'C012': {
-        name: ' Hair Clip',
-        price: 99,
+        name: 'Bow Hair Clip(small)',
+        mrp:115,
+        price: 95,
         images: [
-            'images/C012.webp'
+            'images/C012.webp',
+            'images/C012.1.webp'
         ],
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
@@ -228,8 +240,9 @@ const productData = {
         category: 'accessories'
     },
     'C015': {
-        name: ' Hair Clip',
-        price: 99,
+        name: ' Chochet Daisy Bag (Medium)',
+        mrp: 499,
+        price: 445,
         images: [
             'images/C015.webp',
             'images/C015.1.webp'
@@ -251,8 +264,9 @@ const productData = {
         category: 'accessories'
     },
     'C017': {
-        name: ' Hair Clip',
-        price: 99,
+        name: ' Pink 2 hearts clip',
+        mrp:70,
+        price: 59,
         images: [
             'images/C017.webp',
 
@@ -262,8 +276,9 @@ const productData = {
         category: 'accessories'
     },
     'C018': {
-        name: ' Hair Clip',
-        price: 99,
+        name: ' Scrunchie (Custom Color available)',
+        mrp: 199,
+        price: 169,
         images: [
             'images/C018.webp',
             'images/C018.1.webp',
@@ -272,6 +287,204 @@ const productData = {
         colors: ['blue', 'pink'],
         description: 'Cute hair accessory for girls.',
         category: 'accessories'
+    },
+    'C019': {
+        name: ' strawberry keychain with daisy',
+        mrp: 169,
+        price: 139,
+        images: [
+            'images/C019.webp',
+            'images/C019.1.webp',
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C020': {
+        name: ' Bow keychain(Small)',
+        mrp: 150,
+        price: 99,
+        images: [
+            'images/C019.webp',
+            'images/C019.1.webp',
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C021': {
+        name: ' Cherry Hair Clip (Small)',
+        mrp: 155,
+        price: 129,
+        images: [
+            'images/C021.webp'
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C022': {
+        name: ' Bow Hair Clip (Medium)',
+        mrp: 175,
+        price: 149,
+        images: [
+            'images/C022.webp'
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C023': {
+        name: ' Bow Key Chain (Medium)',
+        mrp: 175,
+        price: 149,
+        images: [
+            'images/C023.webp'
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C024': {
+        name: ' Tulip Key Chain ',
+        mrp: 169,
+        price: 149,
+        images: [
+            'images/C024.webp',
+            'images/C024.1.webp'
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C025': {
+        name: ' Octopus Key Chain',
+        mrp: 199,
+        price: 179,
+        images: [
+            'images/C025.webp',
+            'images/C025.1.webp'
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'keychains'
+    },
+    'C026': {
+        name: ' Flower Claw Clip (Color customization available)',
+        mrp: 165,
+        price: 145,
+        images: [
+            'images/C026.webp',
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C027': {
+        name: ' Flower Claw Clip (Color customization available)',
+        mrp: 155,
+        price: 129,
+        images: [
+            'images/C027.webp',
+            'images/C027.1.webp',
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'accessories'
+    },
+    'C028': {
+        name: ' Penguin Keychain',
+        mrp: 235,
+        price: 199,
+        images: [
+            'images/C028.webp',
+            'images/C028.1.webp',
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'keychains'
+    },
+    'C029': {
+        name: ' Kitty Small Plushie',
+        mrp: 329,
+        price: 289,
+        images: [
+            'images/C029.webp',
+            'images/C029.1.webp',
+            'images/C029.2.webp',
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'cute-decor'
+    },
+    'C030': {
+        name: ' Daisy Lip Balm Pouch',
+        mrp: 189,
+        price: 169,
+        images: [
+            'images/C030.webp',
+            'images/C030.1.webp',
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'cute-decor'
+    },
+    'C031': {
+        name: ' Chick Keychain',
+        mrp: 135,
+        price: 199,
+        images: [
+            'images/C031.webp',
+            
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'keychains'
+    },
+    'C032': {
+        name: ' Bee Keychain',
+        mrp: 213,
+        price: 189,
+        images: [
+            'images/C031.webp',
+            
+            
+            
+
+        ],
+        colors: ['blue', 'pink'],
+        description: 'Cute hair accessory for girls.',
+        category: 'keychains'
     },
 };
 
@@ -1069,7 +1282,7 @@ const categoryMap = {
     'rings': 'Rings',
     'cute-decor': 'Cute Decor',
     'gifts': 'Gifts',
-    'accessories': 'Accessories'
+    'accessories': 'Hair Accessories'
 };
 
 let lastScrollY = 0;
