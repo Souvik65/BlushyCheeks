@@ -22,6 +22,51 @@
         </div>
     </div> -->
 
+    <!-- Preloader: Animated crochet yarn ball and longer, thinner needle (based on user image) -->
+    <div id="preloader" style="position: fixed; inset: 0; background: #fff5f8; z-index: 99999; display: flex; align-items: center; justify-content: center;">
+    <div style="text-align: center;">
+        <!-- SVG traced and stylized from user image reference ![image1](image1) -->
+        <svg id="crochet-preloader-svg" viewBox="0 0 400 220" width="160" height="88" style="display:block; margin:auto;">
+        <!-- Left Yarn Ball -->
+        <ellipse id="yarn-left" cx="110" cy="110" rx="54" ry="48" fill="#ffdbea" stroke="#ff6eb6" stroke-width="4"/>
+        <!-- Right Yarn Ball -->
+        <ellipse id="yarn-right" cx="235" cy="110" rx="54" ry="48" fill="#ffdbea" stroke="#ff6eb6" stroke-width="4"/>
+        <!-- Yarn Wrapper -->
+        <rect x="162" y="87" width="32" height="46" rx="8" fill="#ffb3d9" stroke="#ff6eb6" stroke-width="2"/>
+        <!-- Longer, Thinner Crochet Needle -->
+        <g id="needle-group" style="transform-origin: 140px 45px;">
+            <!-- Shaft (longer, thinner) -->
+            <rect x="135" y="25" width="6" height="95" rx="3" fill="#ff6eb6"/>
+            <!-- Tip (smaller) -->
+            <ellipse cx="138" cy="25" rx="6" ry="4" fill="#fff6fa" stroke="#ff6eb6" stroke-width="1.5"/>
+        </g>
+        <!-- Yarn details (curves) -->
+        <path id="yarn-detail1" d="M75 95 Q115 45 142 95" fill="none" stroke="#ff9a9e" stroke-width="3"/>
+        <path id="yarn-detail2" d="M75 120 Q115 170 142 120" fill="none" stroke="#ffb3d9" stroke-width="3"/>
+        <path id="yarn-detail3" d="M255 95 Q220 45 195 95" fill="none" stroke="#ff9a9e" stroke-width="3"/>
+        <path id="yarn-detail4" d="M255 120 Q220 170 195 120" fill="none" stroke="#ffb3d9" stroke-width="3"/>
+        <!-- Yarn tail (animated) -->
+        <path id="yarn-tail" d="M194 142 Q180 155 160 166 Q140 180 170 200" fill="none" stroke="#ff6eb6" stroke-width="4" stroke-linecap="round"/>
+        <!-- Yarn tail right (animated) -->
+        <path id="yarn-tail-right" d="M230 142 Q260 160 250 190" fill="none" stroke="#ff6eb6" stroke-width="4" stroke-linecap="round"/>
+        <!-- Subtle sparkles -->
+        <circle cx="160" cy="80" r="3.5" fill="#fff6fa" opacity="0.9"/>
+        <circle cx="255" cy="135" r="2.8" fill="#fff6fa" opacity="0.7"/>
+        <circle cx="125" cy="165" r="2.1" fill="#fff6fa" opacity="0.6"/>
+        </svg>
+        <div style="font-family:'Poppins', sans-serif; font-size:1.5rem; color:#ff4da6; margin-top: 14px;">
+        Crocheting a little cuteness…
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
     <marquee behavior="scroll" direction="left" scrollamount="5" style="background: linear-gradient(90deg, #e384ac, #ff6eb6); color: white; font-weight: 500; font-size: 14px; padding: 8px 0; width: 100vw;">
     ✨   50% OFF on Selected Items!   ✨   Free Shipping on Orders Over ₹500!   ✨   New Arrivals Every Week!   ✨   50% OFF on Selected Items!   ✨
 </marquee>
