@@ -1328,8 +1328,8 @@ function openCategoryPage(categoryKey) {
 function updateCartInfoBar(subtotal) {
     const bar = document.getElementById('cartInfoBar');
     if (!bar) return;
-    const freeGiftAt = 300;
-    const freeShippingAt = 500;
+    const freeGiftAt = 499;
+    const freeShippingAt = 799;
     const rsToGift = Math.max(0, freeGiftAt - subtotal);
     const rsToShipping = Math.max(0, freeShippingAt - subtotal);
     let progress = Math.min(subtotal / freeShippingAt, 1);
