@@ -107,17 +107,17 @@ const productData = {
         description: 'Cute heart-shaped ring with a sweet aesthetic design. Adjustable size fits most fingers comfortably. Perfect for everyday wear or special occasions.',
         category: 'rings'
     },
-    'C004': {
-        name: 'Cute Cat Plushie',
-        price: 329,
-        images: [
-            'images/C004.webp',
-            'images/C004.1.webp',
-        ],
-        colors: ['pink', 'white', 'blue', 'purple'],
-        description: 'Soft and cuddly cat plushie made with premium materials. Perfect for hugging, decoration, or as a comfort companion.',
-        category: 'cute-decor'
-    },
+    // 'C004': {
+    //     name: 'Cute Cat Plushie',
+    //     price: 329,
+    //     images: [
+    //         'images/C004.webp',
+    //         'images/C004.1.webp',
+    //     ],
+    //     colors: ['pink', 'white', 'blue', 'purple'],
+    //     description: 'Soft and cuddly cat plushie made with premium materials. Perfect for hugging, decoration, or as a comfort companion.',
+    //     category: 'cute-decor'
+    // },
     'C005': {
         name: 'Cherry keychain',
         mrp: 155,
@@ -1279,7 +1279,7 @@ function filterAllProductsByPrice(range) {
 const categoryMap = {
     'crochet': 'Crochet',
     'keychains': 'Keychains',
-    'rings': 'Rings',
+    'pouches': 'Pouches',
     'cute-decor': 'Cute Decor',
     'gifts': 'Gifts',
     'accessories': 'Hair Accessories'
