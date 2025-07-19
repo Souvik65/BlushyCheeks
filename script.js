@@ -1085,7 +1085,7 @@ function handleFinalCheckout() {
 
     navigator.clipboard.writeText(message)
         .then(() => {
-            showToast('📋 Message copied to clipboard! Redirecting to WhatsApp DM...');
+            showToast('📋Redirecting to WhatsApp DM...');
             setTimeout(() => {
                 // Set flag to clear cart on return
                 localStorage.setItem('clearCartOnReturn', 'yes');
@@ -1286,7 +1286,7 @@ function filterAllProductsByPrice(range) {
 const categoryMap = {
     'bouquet': 'Bouquet',
     'keychains': 'Keychains',
-    'pouches': 'Pouches',
+    'pouches': 'Pouches & Bags',
     'book-mark': 'Book Mark',
     'phone-charm': 'Phone Charm',
     'accessories': 'Hair Accessories'
