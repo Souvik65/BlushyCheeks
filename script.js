@@ -199,7 +199,7 @@ const productData = {
         images: [
             'images/C011.webp',
             'images/C011.1.webp',
-            'images/C011.2.webp'
+   
         ],
         colors: [],
         description: '',
@@ -217,28 +217,29 @@ const productData = {
         description: '',
         category: 'accessories'
     },
-    // 'C013': {
-    //     name: ' Hair Clip',
-    //     price: 99,
-    //     images: [
-    //         'images/C013.webp'
-    //     ],
-    //     colors: ['blue', 'pink'],
-    //     description: '',
-    //     category: 'accessories'
-    // },
-    // 'C014': {
-    //     name: ' Hair Clip',
-    //     price: 99,
-    //     images: [
-    //         'images/C014.webp',
-    //         'images/C014.1.webp',
-    //         'images/C014.2.webp'
-    //     ],
-    //     colors: ['blue', 'pink'],
-    //     description:  ' ',
-    //     category: 'accessories'
-    // },
+    'C034': {
+        name: ' Sunflower keychain',
+        mrp: 165,
+        price: 149,
+        images: [
+            'images/C034.jpg',
+        ],
+        colors: [],
+        description: '',
+        category: 'keychains'
+    },
+    'C033': {
+        name: ' Daisy keychain',
+        mrp: 165,
+        price: 149,
+        images: [
+            'images/C033.jpg',
+
+        ],
+        colors: [],
+        description:  ' ',
+        category: 'keychains'
+    },
     'C015': {
         name: ' Chochet Daisy Bag (Medium)',
         mrp: 499,
