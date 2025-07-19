@@ -105,7 +105,7 @@ const productData = {
         ],
         colors: ['pink', 'blue', 'purple'],
         description: '',
-        category: 'rings'
+        category: 'keychains'
     },
     // 'C004': {
     //     name: 'Cute Cat Plushie',
@@ -142,7 +142,7 @@ const productData = {
         ],
         colors: ['pink', 'blue', 'purple', 'green'],
         description: '',
-        category: 'crochet'
+        category: 'pouches'
     },
     'C007': {
         name: 'Mashroom lipbalm pouch (red)',
@@ -154,7 +154,7 @@ const productData = {
         ],
         colors: ['white', 'pink'],
         description: 'Soft bunny plushie for cuddles and decor.',
-        category: 'cute-decor'
+        category: 'pouches'
     },
     'C008': {
         name: 'White flower clip',
@@ -165,7 +165,7 @@ const productData = {
         ],
         colors: ['pink', 'yellow'],
         description: '',
-        category: 'gifts'
+        category: 'accessories'
     },
     'C009': {
         name: ' Daisy Hair Clip (Small)',
@@ -249,7 +249,7 @@ const productData = {
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'accessories'
+        category: 'pouches'
     },
     // 'C016': {
     //     name: ' Hair Clip',
@@ -299,7 +299,7 @@ const productData = {
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'accessories'
+        category: 'keychains'
     },
     'C020': {
         name: ' Bow keychain(Small)',
@@ -312,7 +312,7 @@ const productData = {
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'accessories'
+        category: 'keychains'
     },
     'C021': {
         name: ' Cherry Hair Clip (Small)',
@@ -351,21 +351,21 @@ const productData = {
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'accessories'
+        category: 'keychains'
     },
     'C024': {
         name: ' Tulip Key Chain ',
         mrp: 169,
         price: 149,
         images: [
-            'images/C024.jpg',
             'images/C024.1.jpg',
+            'images/C024.jpg',
             
 
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'accessories'
+        category: 'keychains'
     },
     'C025': {
         name: ' Octopus Key Chain',
@@ -388,7 +388,6 @@ const productData = {
         images: [
             'images/C026.jpg',
             
-            
 
         ],
         colors: ['blue', 'pink'],
@@ -402,7 +401,6 @@ const productData = {
         images: [
             'images/C027.jpg',
             'images/C027.1.jpg',
-            
             
 
         ],
@@ -440,7 +438,7 @@ const productData = {
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'cute-decor'
+        category: 'keychains'
     },
     'C030': {
         name: ' Daisy Lip Balm Pouch',
@@ -455,7 +453,7 @@ const productData = {
         ],
         colors: ['blue', 'pink'],
         description:  ' ',
-        category: 'cute-decor'
+        category: 'pouches'
     },
     'C031': {
         name: ' Chick Keychain',
@@ -463,9 +461,7 @@ const productData = {
         price: 199,
         images: [
             'images/C031.jpg',
-            
-            
-            
+
 
         ],
         colors: ['blue', 'pink'],
