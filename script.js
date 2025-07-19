@@ -1085,7 +1085,7 @@ function handleFinalCheckout() {
 
     navigator.clipboard.writeText(message)
         .then(() => {
-            showToast('📋Redirecting to WhatsApp DM...');
+            showToast('📋Redirecting to WhatsApp ');
             setTimeout(() => {
                 // Set flag to clear cart on return
                 localStorage.setItem('clearCartOnReturn', 'yes');
@@ -1329,6 +1329,12 @@ function openCategoryPage(categoryKey) {
     </div>
     `;
     document.getElementById('categoryPages').innerHTML = html;
+
+    // Scroll to the top of the category page
+    setTimeout(() => {
+        document.getElementById('categoryPages').scrollIntoView({behavior: 'smooth', block: 'start'});
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }, 10);
 }
 
 // --- Cart Info Bar with cute dark pink theme ---
