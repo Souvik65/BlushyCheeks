@@ -217,28 +217,28 @@ const productData = {
         description: '',
         category: 'accessories'
     },
-    'C013': {
-        name: ' Hair Clip',
-        price: 99,
-        images: [
-            'images/C013.webp'
-        ],
-        colors: ['blue', 'pink'],
-        description: '',
-        category: 'accessories'
-    },
-    'C014': {
-        name: ' Hair Clip',
-        price: 99,
-        images: [
-            'images/C014.webp',
-            'images/C014.1.webp',
-            'images/C014.2.webp'
-        ],
-        colors: ['blue', 'pink'],
-        description:  ' ',
-        category: 'accessories'
-    },
+    // 'C013': {
+    //     name: ' Hair Clip',
+    //     price: 99,
+    //     images: [
+    //         'images/C013.webp'
+    //     ],
+    //     colors: ['blue', 'pink'],
+    //     description: '',
+    //     category: 'accessories'
+    // },
+    // 'C014': {
+    //     name: ' Hair Clip',
+    //     price: 99,
+    //     images: [
+    //         'images/C014.webp',
+    //         'images/C014.1.webp',
+    //         'images/C014.2.webp'
+    //     ],
+    //     colors: ['blue', 'pink'],
+    //     description:  ' ',
+    //     category: 'accessories'
+    // },
     'C015': {
         name: ' Chochet Daisy Bag (Medium)',
         mrp: 499,
@@ -251,18 +251,18 @@ const productData = {
         description:  ' ',
         category: 'accessories'
     },
-    'C016': {
-        name: ' Hair Clip',
-        price: 99,
-        images: [
-            'images/C016.webp',
-            'images/C016.1.webp',
-            'images/C016.2.webp'
-        ],
-        colors: ['blue', 'pink'],
-        description:  ' ',
-        category: 'accessories'
-    },
+    // 'C016': {
+    //     name: ' Hair Clip',
+    //     price: 99,
+    //     images: [
+    //         'images/C016.webp',
+    //         'images/C016.1.webp',
+    //         'images/C016.2.webp'
+    //     ],
+    //     colors: ['blue', 'pink'],
+    //     description:  ' ',
+    //     category: 'accessories'
+    // },
     'C017': {
         name: ' Pink 2 hearts clip',
         mrp:70,
@@ -285,7 +285,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description:  'Custom Color available        ',
+        description:  'Custom Color available ',
         category: 'accessories'
     },
     'C019': {
@@ -306,8 +306,8 @@ const productData = {
         mrp: 150,
         price: 99,
         images: [
-            'images/C019.jpg',
-            'images/C019.1.jpg',
+            'images/C020.jpg',
+            'images/C020.1.jpg',
 
         ],
         colors: ['blue', 'pink'],
