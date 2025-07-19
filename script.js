@@ -1277,11 +1277,11 @@ function filterAllProductsByPrice(range) {
 
 // --- Category Page Single Nav & Cute Back Button ---
 const categoryMap = {
-    'crochet': 'Crochet',
+    'bouquet': 'Bouquet',
     'keychains': 'Keychains',
     'pouches': 'Pouches',
-    'cute-decor': 'Cute Decor',
-    'gifts': 'Gifts',
+    'book-mark': 'Book Mark',
+    'phone-charm': 'Phone Charm',
     'accessories': 'Hair Accessories'
 };
 

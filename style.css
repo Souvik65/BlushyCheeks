@@ -802,6 +802,10 @@ body {
 }
 
 .category-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Existing styles: */
     background: linear-gradient(135deg, #fef7f7, #fff5f8);
     border: 2px solid #fecfef;
     border-radius: 20px;
@@ -810,6 +814,8 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    /* New: Ensure minimum height for nice alignment */
+    min-height: 250px;
 }
 
 .category-card::before {
@@ -864,6 +870,9 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.category-card .category-btn {
+    margin-top: auto; /* Pushes the button to the bottom */
 }
 
 .category-btn:hover {
