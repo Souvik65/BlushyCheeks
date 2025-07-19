@@ -568,6 +568,7 @@ body {
 
 /* Product Card */
 .product-card {
+    
     background: white;
     border-radius: 18px;
     overflow: hidden;
@@ -578,6 +579,7 @@ body {
     min-width: 0;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .product-card:hover {
@@ -605,6 +607,10 @@ body {
 .product-card:hover .product-image img {
     transform: scale(1.08);
 }
+.product-card .add-to-cart-btn {
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
 
 .product-overlay {
     position: absolute;
@@ -650,8 +656,14 @@ body {
 }
 
 .product-info {
-    padding: 16px;
-    text-align: center;
+    display: flex;
+    flex-direction: column ; 
+    flex: 1 1 auto; /* Fills vertical space */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 0;
+    height: 100%;
+    position: relative;
 }
 
 .product-info h3 {
@@ -667,6 +679,7 @@ body {
     font-weight: 700;
     color: #ff9a9e;
     margin-bottom: 11px;
+   align-items: end;
 }
 
 .add-to-cart-btn {
@@ -870,6 +883,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 .category-card .category-btn {
     margin-top: auto; /* Pushes the button to the bottom */
@@ -928,7 +942,7 @@ body {
 }
 .category-page-title {
     color: #ff79a8;
-    font-size: 2.6rem;
+    font-size: 9vw;
     font-weight: 700;
     background: none;
     text-shadow: 0 2px 10px rgba(255, 154, 158, 0.09);
@@ -2446,13 +2460,14 @@ body {
   border-radius: 24px;
   box-sizing: border-box;
   transition: background 0.2s, transform 0.14s, box-shadow 0.18s;
+  margin-top: auto; /* Pushes the button to the bottom */
 }
 
 @media (max-width: 900px) {
-  .product-card .add-to-cart-btn {
+  .product-info .add-to-cart-btn {
     width: 100%;
     max-width: 100%;
-    margin: 18px 0 0 0;
+    margin-top: auto;
     padding: 14px 0;
     font-size: 1rem;
   }

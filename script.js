@@ -76,7 +76,7 @@ const productData = {
         price: 249, // Offer price
         images: [
             'images/C001.webP',
-            'images/C001.l.webP',
+            'images/C001.1.jpg',
         ],
         colors: ['pink', 'blue', 'white'],
         description: 'Adorable handmade bear keychain perfect for bags,',
@@ -476,7 +476,7 @@ const productData = {
         mrp: 213,
         price: 189,
         images: [
-            'images/C031.jpg',
+            'images/C032.jpg',
             
             
             
