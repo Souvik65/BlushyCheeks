@@ -79,7 +79,7 @@ const productData = {
             'images/C001.1.jpg',
         ],
         colors: [ 'yellow', 'white'],
-        description: '',
+        description: '//',
         category: 'keychains'
     },
     'C002': {
@@ -132,8 +132,8 @@ const productData = {
     },
     'C006': {
         name: 'Rabbit lipbalm pouch (pink)',
-        mrp: 213,
-        price: 175,
+        mrp: 185,
+        price: 159,
         images: [
             'images/C006.webp',
             'images/C006.1.webp',
@@ -146,8 +146,8 @@ const productData = {
     },
     'C007': {
         name: 'Mashroom lipbalm pouch (red)',
-        mrp: 199,
-        price: 159,
+        mrp: 179,
+        price: 149,
         images: [
             'images/C007.webp',
             'images/C007.1.webp'
@@ -207,8 +207,8 @@ const productData = {
     },
     'C012': {
         name: 'Bow Hair Clip(small)',
-        mrp:115,
-        price: 95,
+        mrp:119,
+        price: 85,
         images: [
             'images/C012.webp',
             'images/C012.1.webp'
@@ -442,7 +442,7 @@ const productData = {
     'C030': {
         name: ' Daisy Lip Balm Pouch',
         mrp: 189,
-        price: 169,
+        price: 159,
         images: [
             'images/C030.jpg',
             'images/C030.1.jpg',
