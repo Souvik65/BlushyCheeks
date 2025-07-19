@@ -1031,13 +1031,13 @@ function updateCartDisplay() {
 
         // Get the proceed button
         if (proceedToCartBtn) {
-            if (totalPrice < 199) {
+            if (totalPrice < 249) {
                 proceedToCartBtn.disabled = true;
                 proceedToCartBtn.classList.add("disabled-proceed");
                 // Insert warning message above the button
                 const warnEl = document.createElement("div");
                 warnEl.id = "minCartValueWarn";
-                warnEl.textContent = "Minimum cart value is Rs 199";
+                warnEl.textContent = "Minimum cart value is Rs 249";
                 warnEl.className = "min-cart-value-warn";
                 // Insert before the button in cartFooter
                 cartFooter.insertBefore(warnEl, proceedToCartBtn);
