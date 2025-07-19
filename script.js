@@ -78,7 +78,7 @@ const productData = {
             'images/C001.webP',
             'images/C001.1.jpg',
         ],
-        colors: ['pink', 'blue', 'white'],
+        colors: [ 'yellow', 'white'],
         description: '',
         category: 'keychains'
     },
@@ -91,7 +91,7 @@ const productData = {
             'images/C002.2.jpg',
             'images/C002.1.webp',
         ],
-        colors: ['pink', 'purple', 'yellow', 'white'],
+        colors: ['pink', 'red', 'blue', ],
         description: '',
         category: 'keychains'
     },
@@ -103,7 +103,7 @@ const productData = {
             'images/C003.webp',
             'images/C003.1.jpg',
         ],
-        colors: ['pink', 'blue', 'purple'],
+        colors: [],
         description: '',
         category: 'keychains'
     },
@@ -126,7 +126,7 @@ const productData = {
             'images/C005.webp',
             
         ],
-        colors: ['yellow', 'pink', 'blue', 'green'],
+        colors: ['red'],
         description: '',
         category: 'keychains'
     },
@@ -140,7 +140,7 @@ const productData = {
             'images/C006.2.webp',
             'images/C006.3.webp'
         ],
-        colors: ['pink', 'blue', 'purple', 'green'],
+        colors: ['pink', 'blue', 'yellow' ],
         description: '',
         category: 'pouches'
     },
@@ -152,7 +152,7 @@ const productData = {
             'images/C007.webp',
             'images/C007.1.webp'
         ],
-        colors: ['white', 'pink'],
+        colors: ['blue','red', 'pink'],
         description: 'Soft bunny plushie for cuddles and decor.',
         category: 'pouches'
     },
@@ -163,7 +163,7 @@ const productData = {
         images: [
             'images/C008.webp'
         ],
-        colors: ['pink', 'yellow'],
+        colors: ['pink', 'yellow','blue'],
         description: '',
         category: 'accessories'
     },
@@ -176,7 +176,7 @@ const productData = {
             'images/C009.1.webp',
             'images/C009.2.webp'
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description: '',
         category: 'accessories'
     },
@@ -188,7 +188,7 @@ const productData = {
             'images/C010.webp',
             'images/C010.1.webp',
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description: '',
         category: 'accessories'
     },
@@ -201,7 +201,7 @@ const productData = {
             'images/C011.1.webp',
             'images/C011.2.webp'
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description: '',
         category: 'accessories'
     },
@@ -213,7 +213,7 @@ const productData = {
             'images/C012.webp',
             'images/C012.1.webp'
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'white', 'yellow', 'dark pink', 'red'],
         description: '',
         category: 'accessories'
     },
@@ -247,8 +247,8 @@ const productData = {
             'images/C015.webp',
             'images/C015.1.webp'
         ],
-        colors: ['blue', 'pink'],
-        description:  ' ',
+        colors: [],
+        description:  'Color Customization Available ',
         category: 'pouches'
     },
     // 'C016': {
@@ -271,8 +271,8 @@ const productData = {
             'images/C017.webp',
 
         ],
-        colors: ['blue', 'pink'],
-        description:  ' ',
+        colors: [],
+        description:  'Color Customization Available ',
         category: 'accessories'
     },
     'C018': {
@@ -284,7 +284,7 @@ const productData = {
             'images/C018.1.webp',
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  'Custom Color available ',
         category: 'accessories'
     },
@@ -297,7 +297,7 @@ const productData = {
             'images/C019.1.jpg'
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  ' ',
         category: 'keychains'
     },
@@ -310,12 +310,12 @@ const productData = {
             'images/C020.1.jpg',
 
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'white', 'yellow', 'dark pink', 'red'],
         description:  ' ',
         category: 'keychains'
     },
     'C021': {
-        name: ' Cherry Hair Clip (Small)',
+        name: ' Cherry Hair Clip ',
         mrp: 155,
         price: 129,
         images: [
@@ -323,7 +323,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  ' ',
         category: 'accessories'
     },
@@ -336,7 +336,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'white', 'yellow', 'dark pink', 'red'],
         description:  ' ',
         category: 'accessories'
     },
@@ -349,7 +349,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'white', 'yellow', 'dark pink', 'red'],
         description:  ' ',
         category: 'keychains'
     },
@@ -363,7 +363,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: ['blue', 'light pink', 'dark pink','yellow'],
         description:  ' ',
         category: 'keychains'
     },
@@ -377,7 +377,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'white', 'dark pink','dark blue', 'yellow' , 'white' ],
         description:  ' ',
         category: 'keychains'
     },
@@ -390,7 +390,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  ' Color customization available ',
         category: 'accessories'
     },
@@ -404,7 +404,7 @@ const productData = {
             
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [''],
         description:  ' Color customization available ',
         category: 'accessories'
     },
@@ -417,10 +417,9 @@ const productData = {
             'images/C028.jpg',
             'images/C028.1.jpg',
             
-            
-
+        
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'dark blue', 'dark pink', 'yellow', 'black'],
         description:  ' ',
         category: 'keychains'
     },
@@ -433,10 +432,9 @@ const productData = {
             'images/C029.1.jpg',
             'images/C029.2.jpg',
             
-            
 
         ],
-        colors: ['blue', 'pink'],
+        colors: ['light blue', 'light pink', 'dark blue', 'dark pink', 'yellow'],
         description:  ' ',
         category: 'keychains'
     },
@@ -447,11 +445,10 @@ const productData = {
         images: [
             'images/C030.jpg',
             'images/C030.1.jpg',
-            
-            
+                        
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  ' ',
         category: 'pouches'
     },
@@ -464,7 +461,7 @@ const productData = {
 
 
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  ' ',
         category: 'keychains'
     },
@@ -476,7 +473,7 @@ const productData = {
             'images/C032.jpg',
             
         ],
-        colors: ['blue', 'pink'],
+        colors: [],
         description:  ' ',
         category: 'keychains'
     },
