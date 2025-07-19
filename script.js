@@ -91,7 +91,7 @@ const productData = {
             'images/C002.2.jpg',
             'images/C002.1.webp',
         ],
-        colors: ['pink', 'red', 'blue', ],
+        colors: ['pink', 'magenta', 'blue'],
         description: '',
         category: 'keychains'
     },
@@ -104,7 +104,7 @@ const productData = {
             'images/C003.1.jpg',
         ],
         colors: [],
-        description: '',
+        description:'A cute Miffy keychain made with soft plush material. Perfect for adding a touch of cuteness to your keys or bag.',
         category: 'keychains'
     },
     // 'C004': {
@@ -796,7 +796,8 @@ function openProductModal(productId, directToCart = false) {
     currentProduct = productData[productId];
     if (!currentProduct) return;
     modalQuantity = 1;
-    selectedColor = currentProduct.colors[0];
+    // Set selectedColor: if there are colors, pick first; else, use empty string
+    selectedColor = (currentProduct.colors && currentProduct.colors.length > 0) ? currentProduct.colors[0] : '';
     populateProductModal();
     productModal.classList.add('open');
     modalOverlay.classList.add('open');
@@ -806,13 +807,6 @@ function openProductModal(productId, directToCart = false) {
     setTimeout(() => {
         productModal.focus();
     }, 10);
-
-    // // If direct add-to-cart, add immediately and close
-    // if (directToCart) {
-    //     addToCartFromModal();
-    //     closeProductModal();
-    //     showMessage('Product added to cart!', 'success');
-    // }
 }
 
 function closeProductModal() {
@@ -827,7 +821,7 @@ function populateProductModal() {
     if (!currentProduct) return;
     modalProductName.textContent = currentProduct.name;
 
-    // Show MRP if exists and different from price, else just price
+    // Show MRP and price
     if (currentProduct.mrp && currentProduct.mrp > currentProduct.price) {
         modalProductPrice.innerHTML = `
             <span class="mrp">₹${currentProduct.mrp}</span>
@@ -864,25 +858,71 @@ function populateProductModal() {
         modalThumbnails.appendChild(thumb);
     });
 
-    // Color swatches
+    // Color swatches (show/hide section based on colors array)
     modalColorOptions.innerHTML = '';
-    currentProduct.colors.forEach((color) => {
-        const swatch = document.createElement('div');
-        swatch.className = `color-swatch ${color} ${color === selectedColor ? 'active' : ''}`;
-        swatch.tabIndex = 0;
-        swatch.setAttribute('aria-label', `Select color ${color}`);
-        swatch.title = color;
-        swatch.addEventListener('click', () => selectColor(color));
-        swatch.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') selectColor(color);
+    const colorSection = modalColorOptions.parentElement;
+    if (currentProduct.colors && currentProduct.colors.length > 0 && currentProduct.colors[0] !== "") {
+        colorSection.style.display = '';
+        currentProduct.colors.forEach((color) => {
+            const swatch = document.createElement('div');
+            // If color is a valid css color name, show swatch; else fallback to pink
+            swatch.className = `color-swatch`;
+            swatch.style.background = getCssColor(color);
+            swatch.title = color;
+            swatch.tabIndex = 0;
+            swatch.setAttribute('aria-label', `Select color ${color}`);
+            if (color === selectedColor) swatch.classList.add("active");
+            swatch.addEventListener('click', () => selectColor(color));
+            swatch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') selectColor(color);
+            });
+            modalColorOptions.appendChild(swatch);
         });
-        modalColorOptions.appendChild(swatch);
-    });
+    } else {
+        colorSection.style.display = 'none';
+    }
 
     modalAddToCartBtn.onclick = () => addToCartFromModal();
     modalAddToCartBtn.tabIndex = 0;
     modalAddToCartBtn.setAttribute('aria-label', `Add ${currentProduct.name} to cart`);
 }
+
+// Helper: Try to show the correct color in swatches (if invalid, fallback to pink)
+function getCssColor(color) {
+    if (!color) return "#ff9a9e";
+    // Try to use the color string as a CSS color, fallback to pink if invalid
+    const temp = document.createElement('div');
+    temp.style.color = color;
+    if (temp.style.color !== '') return color;
+    // Common color aliases
+    const fallbackColors = {
+        "dark pink": "#f83dadff",
+        "light pink": "#f690e9ff",
+        "magenta": "#ff00ff",
+        "dark blue": "#0f52ba",
+        "light blue": "#65d5faff",
+        "yellow": "#fdcb6e",
+        "red": "#ff4d4d",
+        "green": "#55efc4",
+        "white": "#fff",
+        "black": "#000",
+        "purple": "#a29bfe"
+    };
+    return fallbackColors[color.toLowerCase()] || "#ff9a9e";
+}
+
+// Color select logic
+function selectColor(color) {
+    selectedColor = color;
+    document.querySelectorAll('.color-swatch').forEach(swatch => {
+        if (swatch.title === color) {
+            swatch.classList.add("active");
+        } else {
+            swatch.classList.remove("active");
+        }
+    });
+}
+
 
 function changeMainImage(imageSrc, index) {
     modalMainImage.src = imageSrc;
@@ -901,9 +941,11 @@ function changeModalQuantity(change) {
     modalQuantityElem.textContent = modalQuantity;
 }
 function addToCartFromModal() {
-    if (!currentProduct || !selectedColor) return;
+    if (!currentProduct) return;
+    // If color section is hidden, use empty string
+    const colorToAdd = (currentProduct.colors && currentProduct.colors.length > 0 && selectedColor) ? selectedColor : '';
     const productId = Object.keys(productData).find(key => productData[key] === currentProduct);
-    addToCart(productId, currentProduct.name, currentProduct.price, currentProduct.images[0], selectedColor, modalQuantity);
+    addToCart(productId, currentProduct.name, currentProduct.price, currentProduct.images[0], colorToAdd, modalQuantity);
     closeProductModal();
     showMessage('Product added to cart!', 'success');
 }
