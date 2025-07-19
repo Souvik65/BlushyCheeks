@@ -88,7 +88,7 @@ const productData = {
         price: 249,
         images: [
             'images/C002.webp',
-            'images/C002.2.webp',
+            'images/C002.2.jpg',
             'images/C002.1.webp',
         ],
         colors: ['pink', 'purple', 'yellow', 'white'],
