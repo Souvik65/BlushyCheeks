@@ -105,7 +105,7 @@ body {
 } */
 
 /* make the logo animate */
-/* @keyframes wiggle {
+@keyframes wiggle {
   0%, 100% { transform: rotate(-7deg); }
   25% { transform: rotate(7deg); }
   50% { transform: rotate(-7deg); }
@@ -116,7 +116,7 @@ body {
   animation: wiggle 1.2s ease-in-out infinite;
   display: inline-block;
   vertical-align: middle;
-} */
+}
 
 .logo-text {
     font-family: 'Poppins', sans-serif;
