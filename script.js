@@ -79,7 +79,7 @@ const productData = {
             'images/C001.1.jpg',
         ],
         colors: ['pink', 'blue', 'white'],
-        description: 'Adorable handmade bear keychain perfect for bags,',
+        description: '',
         category: 'keychains'
     },
     'C002': {
@@ -92,7 +92,7 @@ const productData = {
             'images/C002.1.webp',
         ],
         colors: ['pink', 'purple', 'yellow', 'white'],
-        description: 'Beautiful handcrafted crochet flower bouquet that never wilts. Perfect for home decoration or as a thoughtful gift for loved ones.',
+        description: '',
         category: 'keychains'
     },
     'C003': {
@@ -104,7 +104,7 @@ const productData = {
             'images/C003.1.jpg',
         ],
         colors: ['pink', 'blue', 'purple'],
-        description: 'Cute heart-shaped ring with a sweet aesthetic design. Adjustable size fits most fingers comfortably. Perfect for everyday wear or special occasions.',
+        description: '',
         category: 'rings'
     },
     // 'C004': {
@@ -127,7 +127,7 @@ const productData = {
             
         ],
         colors: ['yellow', 'pink', 'blue', 'green'],
-        description: 'Colorful rainbow keychain that brings joy and positivity wherever you go. Handmade with vibrant colors and quality craftsmanship.',
+        description: '',
         category: 'keychains'
     },
     'C006': {
@@ -141,7 +141,7 @@ const productData = {
             'images/C006.3.webp'
         ],
         colors: ['pink', 'blue', 'purple', 'green'],
-        description: 'Handcrafted crochet bookmark perfect for book lovers. Features intricate patterns and a cute tassel design.',
+        description: '',
         category: 'crochet'
     },
     'C007': {
@@ -164,7 +164,7 @@ const productData = {
             'images/C008.webp'
         ],
         colors: ['pink', 'yellow'],
-        description: 'Perfect for gifting any occasion.',
+        description: '',
         category: 'gifts'
     },
     'C009': {
@@ -177,7 +177,7 @@ const productData = {
             'images/C009.2.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description: '',
         category: 'accessories'
     },
     'C010': {
@@ -189,7 +189,7 @@ const productData = {
             'images/C010.1.webp',
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description: '',
         category: 'accessories'
     },
     'C011': {
@@ -202,7 +202,7 @@ const productData = {
             'images/C011.2.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description: '',
         category: 'accessories'
     },
     'C012': {
@@ -214,7 +214,7 @@ const productData = {
             'images/C012.1.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description: '',
         category: 'accessories'
     },
     'C013': {
@@ -224,7 +224,7 @@ const productData = {
             'images/C013.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description: '',
         category: 'accessories'
     },
     'C014': {
@@ -236,7 +236,7 @@ const productData = {
             'images/C014.2.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C015': {
@@ -248,7 +248,7 @@ const productData = {
             'images/C015.1.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C016': {
@@ -260,7 +260,7 @@ const productData = {
             'images/C016.2.webp'
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C017': {
@@ -272,11 +272,11 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C018': {
-        name: ' Scrunchie (Custom Color available)',
+        name: ' Scrunchie ',
         mrp: 199,
         price: 169,
         images: [
@@ -285,7 +285,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  'Custom Color available        ',
         category: 'accessories'
     },
     'C019': {
@@ -298,7 +298,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C020': {
@@ -311,7 +311,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C021': {
@@ -324,7 +324,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C022': {
@@ -337,7 +337,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C023': {
@@ -350,7 +350,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C024': {
@@ -364,7 +364,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'accessories'
     },
     'C025': {
@@ -378,11 +378,11 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'keychains'
     },
     'C026': {
-        name: ' Flower Claw Clip (Color customization available)',
+        name: ' Flower Claw Clip (Big)',
         mrp: 165,
         price: 145,
         images: [
@@ -392,11 +392,11 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' Color customization available ',
         category: 'accessories'
     },
     'C027': {
-        name: ' Flower Claw Clip (Color customization available)',
+        name: ' Flower Claw Clip (Small) ',
         mrp: 155,
         price: 129,
         images: [
@@ -407,7 +407,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' Color customization available ',
         category: 'accessories'
     },
     'C028': {
@@ -415,6 +415,7 @@ const productData = {
         mrp: 235,
         price: 199,
         images: [
+            'images/C028.2.webp',
             'images/C028.jpg',
             'images/C028.1.jpg',
             
@@ -422,7 +423,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'keychains'
     },
     'C029': {
@@ -438,7 +439,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'cute-decor'
     },
     'C030': {
@@ -453,7 +454,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'cute-decor'
     },
     'C031': {
@@ -468,7 +469,7 @@ const productData = {
 
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'keychains'
     },
     'C032': {
@@ -478,12 +479,9 @@ const productData = {
         images: [
             'images/C032.jpg',
             
-            
-            
-
         ],
         colors: ['blue', 'pink'],
-        description: 'Cute hair accessory for girls.',
+        description:  ' ',
         category: 'keychains'
     },
 };
@@ -834,12 +832,24 @@ function closeProductModal() {
 function populateProductModal() {
     if (!currentProduct) return;
     modalProductName.textContent = currentProduct.name;
-    modalProductPrice.textContent = `₹${currentProduct.price}`;
+
+    // Show MRP if exists and different from price, else just price
+    if (currentProduct.mrp && currentProduct.mrp > currentProduct.price) {
+        modalProductPrice.innerHTML = `
+            <span class="mrp">₹${currentProduct.mrp}</span>
+            <span class="offer-price">₹${currentProduct.price}</span>
+        `;
+    } else {
+        modalProductPrice.innerHTML = `
+            <span class="offer-price">₹${currentProduct.price}</span>
+        `;
+    }
+
     modalProductDescription.textContent = currentProduct.description;
     modalMainImage.src = currentProduct.images[0];
     modalMainImage.alt = currentProduct.name;
-    // modalMainImage.onerror = function() { this.src = 'fallback.jpg'; };
     modalQuantityElem.textContent = modalQuantity;
+
     // Thumbnails
     modalThumbnails.innerHTML = '';
     currentProduct.images.forEach((img, index) => {
@@ -850,7 +860,6 @@ function populateProductModal() {
         const imgtag = document.createElement('img');
         imgtag.src = img;
         imgtag.alt = currentProduct.name;
-        // imgtag.onerror = function() { this.src = 'fallback.jpg'; };
         thumb.appendChild(imgtag);
         thumb.addEventListener('click', () => changeMainImage(img, index));
         thumb.addEventListener('keydown', (e) => {
@@ -860,6 +869,7 @@ function populateProductModal() {
         });
         modalThumbnails.appendChild(thumb);
     });
+
     // Color swatches
     modalColorOptions.innerHTML = '';
     currentProduct.colors.forEach((color) => {
@@ -874,6 +884,7 @@ function populateProductModal() {
         });
         modalColorOptions.appendChild(swatch);
     });
+
     modalAddToCartBtn.onclick = () => addToCartFromModal();
     modalAddToCartBtn.tabIndex = 0;
     modalAddToCartBtn.setAttribute('aria-label', `Add ${currentProduct.name} to cart`);
