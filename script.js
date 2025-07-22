@@ -99,7 +99,7 @@ const productData = {
     'C003': {
         name: 'Miffy keychain',
         mrp:219,
-        price: 169,
+        price: 179,
         images: [
             'images/C003.webp',
             'images/C003.1.jpg',
@@ -122,7 +122,7 @@ const productData = {
     'C005': {
         name: 'Cherry keychain',
         mrp: 155,
-        price: 129,
+        price: 119,
         images: [
             'images/C005.webp',
             
@@ -172,7 +172,7 @@ const productData = {
     'C008': {
         name: 'White flower clip',
         mrp: 199,
-        price: 165,
+        price: 129,
         images: [
             'images/C008.webp'
         ],
@@ -183,7 +183,7 @@ const productData = {
     'C009': {
         name: ' Daisy Hair Clip (Small)',
         mrp: 65,
-        price: 49,
+        price: 39,
         images: [
             'images/C009.webp',
             'images/C009.1.webp',
@@ -221,7 +221,7 @@ const productData = {
     'C012': {
         name: 'Bow Hair Clip(small)',
         mrp:119,
-        price: 85,
+        price: 79,
         images: [
             'images/C012.webp',
             'images/C012.1.webp'
@@ -256,7 +256,7 @@ const productData = {
     'C015': {
         name: ' Chochet Daisy Bag (Medium)',
         mrp: 499,
-        price: 445,
+        price: 399,
         images: [
             'images/C015.webp',
             'images/C015.1.webp'
@@ -280,7 +280,7 @@ const productData = {
     'C017': {
         name: ' Pink 2 hearts clip',
         mrp:70,
-        price: 59,
+        price: 49,
         images: [
             'images/C017.webp',
 
@@ -318,7 +318,7 @@ const productData = {
     'C020': {
         name: ' Bow keychain(Small)',
         mrp: 150,
-        price: 99,
+        price: 79,
         images: [
             'images/C020.jpg',
             'images/C020.1.jpg',
@@ -331,7 +331,7 @@ const productData = {
     'C021': {
         name: ' Cherry Hair Clip ',
         mrp: 155,
-        price: 129,
+        price: 119,
         images: [
             'images/C021.webp'
             
@@ -344,7 +344,7 @@ const productData = {
     'C022': {
         name: ' Bow Hair Clip (Medium)',
         mrp: 175,
-        price: 149,
+        price: 139,
         images: [
             'images/C022.jpg',
             
@@ -355,9 +355,9 @@ const productData = {
         category: 'accessories'
     },
     'C023': {
-        name: ' Bow Key Chain (Medium)',
+        name: ' Bow Keychain (Medium)',
         mrp: 175,
-        price: 149,
+        price: 139,
         images: [
             'images/C023.jpg',
             
@@ -384,7 +384,7 @@ const productData = {
     'C025': {
         name: ' Octopus Key Chain',
         mrp: 199,
-        price: 179,
+        price: 159,
         images: [
             'images/C025.jpg',
             'images/C025.1.jpg',
@@ -398,7 +398,7 @@ const productData = {
     'C026': {
         name: ' Flower Claw Clip (Big)',
         mrp: 165,
-        price: 145,
+        price: 139,
         images: [
             'images/C026.jpg',
             
@@ -411,7 +411,7 @@ const productData = {
     'C027': {
         name: ' Flower Claw Clip (Small) ',
         mrp: 155,
-        price: 129,
+        price: 119,
         images: [
             'images/C027.jpg',
             'images/C027.1.jpg',
@@ -440,7 +440,7 @@ const productData = {
     'C029': {
         name: ' Kitty Small Plushie',
         mrp: 329,
-        price: 289,
+        price: 249,
         images: [
             'images/C029.jpg',
             'images/C029.1.jpg',
