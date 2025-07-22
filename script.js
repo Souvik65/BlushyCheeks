@@ -69,11 +69,12 @@ let allProductsFilter = null;
 
 
 // Product data with enhanced details and categories
+
 const productData = {
     'C001': {
         name: 'Rabbit With Heart Keychain',
-        mrp: 289, // <--- Add this line for original MRP
-        price: 249, // Offer price
+        mrp: 275, // <--- Add this line for original MRP
+        price: 239, // Offer price
         images: [
             'images/C001.webP',
             'images/C001.1.jpg',
@@ -84,8 +85,8 @@ const productData = {
     },
     'C002': {
         name: 'Strawberry Cow Keychain',
-        mrp: 289,
-        price: 249,
+        mrp: 275,
+        price: 239,
         images: [
             'images/C002.webp',
             'images/C002.2.jpg',
@@ -97,8 +98,8 @@ const productData = {
     },
     'C003': {
         name: 'Miffy keychain',
-        mrp:235,
-        price: 199,
+        mrp:219,
+        price: 169,
         images: [
             'images/C003.webp',
             'images/C003.1.jpg',
@@ -129,6 +130,18 @@ const productData = {
         colors: ['red'],
         description: '',
         category: 'keychains'
+    },
+    'C036': {
+        name: 'Daisy Bookmark',
+        mrp: 129,
+        price: 79,
+        images: [
+            'images/C036.jpg',
+            
+        ],
+        colors: [],
+        description:  ' ',
+        category: 'book-mark'
     },
     'C006': {
         name: 'Rabbit lipbalm pouch (pink)',
@@ -183,7 +196,7 @@ const productData = {
     'C010': {
         name: 'Daisy Hair Clip ',
         mrp: 179,
-        price: 149,
+        price: 129,
         images: [
             'images/C010.webp',
             'images/C010.1.webp',
@@ -195,7 +208,7 @@ const productData = {
     'C011': {
         name: 'Sunflower Hair Clip',
         mrp: 179,
-        price: 149,
+        price: 129,
         images: [
             'images/C011.webp',
             'images/C011.1.webp',
@@ -220,7 +233,7 @@ const productData = {
     'C034': {
         name: ' Sunflower keychain',
         mrp: 165,
-        price: 149,
+        price: 129,
         images: [
             'images/C034.jpg',
         ],
@@ -231,7 +244,7 @@ const productData = {
     'C033': {
         name: ' Daisy keychain',
         mrp: 165,
-        price: 149,
+        price: 129,
         images: [
             'images/C033.jpg',
 
@@ -292,7 +305,7 @@ const productData = {
     'C019': {
         name: ' strawberry keychain with daisy',
         mrp: 169,
-        price: 139,
+        price: 129,
         images: [
             'images/C019.jpg',
             'images/C019.1.jpg'
@@ -412,7 +425,7 @@ const productData = {
     'C028': {
         name: ' Penguin Keychain',
         mrp: 235,
-        price: 199,
+        price: 179,
         images: [
             'images/C028.2.webp',
             'images/C028.jpg',
@@ -440,7 +453,7 @@ const productData = {
         category: 'keychains'
     },
     'C030': {
-        name: ' Daisy Lip Balm Pouch',
+        name: ' Daisy LipBalm Pouch',
         mrp: 189,
         price: 159,
         images: [
@@ -455,8 +468,8 @@ const productData = {
     },
     'C031': {
         name: ' Chick Keychain',
-        mrp: 135,
-        price: 199,
+        mrp: 235,
+        price: 179,
         images: [
             'images/C031.jpg',
 
@@ -468,8 +481,8 @@ const productData = {
     },
     'C032': {
         name: ' Bee Keychain',
-        mrp: 213,
-        price: 189,
+        mrp: 210,
+        price: 159,
         images: [
             'images/C032.jpg',
             
@@ -478,6 +491,21 @@ const productData = {
         description:  ' ',
         category: 'keychains'
     },
+    'C035': {
+        name: 'Flower Bookmark',
+        mrp: 129,
+        price: 79,
+        images: [
+            'images/C035.jpg',
+            
+        ],
+        colors: [],
+        description:  ' ',
+        category: 'book-mark'
+    },
+
+
+    // Add more products as needed according to the image numbers
 };
 
 // DOM elements
