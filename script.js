@@ -1412,7 +1412,7 @@ function updateCartInfoBar(subtotal) {
     const bar = document.getElementById('cartInfoBar');
     if (!bar) return;
     const freeGiftAt = 499;
-    const freeShippingAt = 799;
+    const freeShippingAt = 999;
     const rsToGift = Math.max(0, freeGiftAt - subtotal);
     const rsToShipping = Math.max(0, freeShippingAt - subtotal);
     let progress = Math.min(subtotal / freeShippingAt, 1);
@@ -1435,7 +1435,7 @@ function updateCartInfoBar(subtotal) {
         : `<span class="free-link">FREE Gift</span> Unlocked!`;
 
     let shippingText = rsToShipping > 0
-        ? `Add items worth <span class="highlight-text">₹${rsToShipping.toFixed(2)}</span> for <span class="free-link" onclick="filterAllProductsByPrice('above-799')">FREE Delivery</span>`
+        ? `Add items worth <span class="highlight-text">₹${rsToShipping.toFixed(2)}</span> for <span class="free-link" onclick="filterAllProductsByPrice('above-999')">FREE Delivery</span>`
         : `<span class="free-link">FREE Delivery</span> Unlocked!`;
 
     infoHtml += `<div>
