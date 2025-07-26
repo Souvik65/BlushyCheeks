@@ -1545,6 +1545,38 @@ body {
     font-size: 1.1rem;
 }
 
+.address-section.card-custom {
+    border-radius: 18px;
+    background: #fff5f8;
+    box-shadow: 0 4px 18px rgba(255, 121, 168, 0.11);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.input-custom {
+    background-color: #fff;
+    border: 2px solid #fecfef;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #ff79a8;
+}
+
+.input-custom:focus {
+    border-color: #ff79a8;
+    outline: none;
+}
+
+.address-section h4 {
+    color: #ff79a8;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+
+
 /* Cart Summary */
 .cart-summary {
     background: white;

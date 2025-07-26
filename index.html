@@ -391,6 +391,43 @@
                 </div>
             </div>
 
+            <!-- Address Form Section (NEW - THEME CUSTOMIZED) -->
+            <div class="address-section card-custom" style="margin: 30px 0;">
+                <div class="card-body">
+                    <div class="text-center mb-3 pb-2 mt-3">
+                        <h4 style="color: #ff79a8;">Delivery Details</h4>
+                    </div>
+                    <form id="addressForm" autocomplete="on">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="text" id="addressFirstName" class="form-control input-custom" placeholder="First name" autocomplete="given-name" required />
+                            </div>
+                            <div class="col">
+                                <input type="text" id="addressLastName" class="form-control input-custom" placeholder="Last name" autocomplete="family-name" required />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="tel" id="addressState" class="form-control input-custom" placeholder="State" autocomplete="address-level1" required />
+                            </div>
+                            <div class="col">
+                                <input type="text" id="addressCity" class="form-control input-custom" placeholder="City" autocomplete="address-level2" required />
+                            </div>
+                            <div class="col">
+                                <input type="text" id="addressZip" class="form-control input-custom" placeholder="Pincode" autocomplete="postal-code" required />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="text" id="addressStreet" class="form-control input-custom" placeholder="Address" autocomplete="street-address" required />
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
             <!-- Cart Summary -->
             <div class="cart-summary">
                 <div class="summary-row">

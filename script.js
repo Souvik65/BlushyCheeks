@@ -80,7 +80,7 @@ const productData = {
             'images/C001.1.jpg',
         ],
         colors: [ 'yellow', 'white'],
-        description: '//',
+        description: 'A cute rabbit keychain with a heart design, perfect for adding a touch of cuteness to your keys or bag.',
         category: 'keychains'
     },
     'C002': {
@@ -1131,23 +1131,42 @@ function initializeDeliveryOptions() {
     });
 }
 
-// --- Insta Message with pop up message toast ---
+// --- whatsapp Message with pop up message toast ---
 function handleFinalCheckout() {
     if (cart.length === 0) {
         showMessage('Your cart is empty! Add some items first.', 'error');
         return;
     }
+
+    // Collect address details
+    const firstName = document.getElementById('addressFirstName').value.trim();
+    const lastName = document.getElementById('addressLastName').value.trim();
+    const state = document.getElementById('addressState').value.trim();
+    const city = document.getElementById('addressCity').value.trim();
+    const zip = document.getElementById('addressZip').value.trim();
+    const street = document.getElementById('addressStreet').value.trim();
+    // const email = document.getElementById('addressEmail').value.trim();
+
+    // Basic validation (optional, can be improved)
+    if (!firstName || !lastName || !city || !zip || !street || !state) {
+        showMessage('Please fill all address details before proceeding.', 'error');
+        return;
+    }
+
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const delivery = selectedDelivery === 'fast' ? 50 : 0;
     const total = subtotal + delivery;
     const itemsList = cart.map(item =>
-        `${item.originalId}(${item.quantity})(${item.color})`
+        `Item ${item.originalId}, Quantity = *${item.quantity}*, Color = ${item.color}, Price= ₹${item.price.toFixed(2)}\n`
     ).join(', ');
-    const deliveryText = selectedDelivery === 'fast' ? 'Fast (3–5 Days)' : 'Standard (5-10 Days)';
-    const message = `HI Blushy Cheeks, I want to buy: [${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}`;
-    const encodedMessage = encodeURIComponent(message);
+    const deliveryText = selectedDelivery === 'fast' ? 'Fast (5–7 Days) ₹99' : 'Standard (10-12 Days)₹60';
 
-    // Your WhatsApp number in international format, without '+'
+    // Assemble address for WhatsApp message
+    const addressText = `Name: ${firstName} ${lastName}\nState: ${state}\nCity: ${city}\nZip: ${zip}\nAddress: ${street}`;
+    const message =
+        `HI Blushy Cheeks, I want to buy: \n[${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}\n\nAddress:\n${addressText}`;
+
+    const encodedMessage = encodeURIComponent(message);
     const whatsappNumber = "918794387293";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
@@ -1155,7 +1174,6 @@ function handleFinalCheckout() {
         .then(() => {
             showToast('📋Redirecting to WhatsApp ');
             setTimeout(() => {
-                // Set flag to clear cart on return
                 localStorage.setItem('clearCartOnReturn', 'yes');
                 window.open(whatsappURL, '_blank');
             }, 3500);
