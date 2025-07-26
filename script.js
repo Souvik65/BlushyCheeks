@@ -1078,11 +1078,26 @@ function updateCartDisplay() {
         }
     }
 }
+
 function updateCartPageDisplay() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const delivery = selectedDelivery === 'fast' ? 99 : 60;
+
+    let delivery = 0;
+    // Free standard delivery if subtotal > 999
+    if (subtotal > 999) {
+        if (selectedDelivery === 'fast') {
+            delivery = 99;
+        } else {
+            delivery = 0; // Standard delivery is free
+        }
+    } else {
+        delivery = selectedDelivery === 'fast' ? 99 : 60;
+    }
+
     const total = subtotal + delivery;
     updateCartInfoBar(subtotal);
+
+    // Cart Items Display (unchanged)
     if (cart.length === 0) {
         cartPageItems.innerHTML = `
             <div class="empty-cart-page">
@@ -1117,10 +1132,36 @@ function updateCartPageDisplay() {
             </div>
         `).join('');
     }
+
+    // Delivery section always visible, but update the prices
     if (cartSubtotal) cartSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
     if (deliveryFee) deliveryFee.textContent = `₹${delivery.toFixed(2)}`;
     if (cartPageTotal) cartPageTotal.textContent = `₹${total.toFixed(2)}`;
+
+    // Optionally show a message if standard delivery is free
+    const deliveryOptionsSection = document.getElementById('deliveryOptionsSection');
+    if (deliveryOptionsSection) {
+        const infoMsgId = 'freeDeliveryInfoMsg';
+        let infoMsg = document.getElementById(infoMsgId);
+        if (subtotal > 999) {
+            if (!infoMsg) {
+                infoMsg = document.createElement('div');
+                infoMsg.id = infoMsgId;
+                infoMsg.style.color = '#ff79a8';
+                infoMsg.style.fontWeight = 'bold';
+                infoMsg.style.marginBottom = '10px';
+                infoMsg.style.fontSize = '1.1rem';
+                infoMsg.style.textAlign = 'center'; 
+                infoMsg.textContent = '🎉 Standard delivery is FREE! Select Fast Delivery if you need it quicker (₹99).';
+                deliveryOptionsSection.insertBefore(infoMsg, deliveryOptionsSection.firstChild);
+            }
+        } else {
+            if (infoMsg) infoMsg.remove();
+        }
+    }
 }
+
+// Delivery selection event handler remains unchanged
 function initializeDeliveryOptions() {
     const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
     deliveryOptions.forEach(option => {
@@ -1131,7 +1172,7 @@ function initializeDeliveryOptions() {
     });
 }
 
-// --- whatsapp Message with pop up message toast ---
+//whatsapp checkout functionality
 function handleFinalCheckout() {
     if (cart.length === 0) {
         showMessage('Your cart is empty! Add some items first.', 'error');
@@ -1143,28 +1184,45 @@ function handleFinalCheckout() {
     const lastName = document.getElementById('addressLastName').value.trim();
     const state = document.getElementById('addressState').value.trim();
     const city = document.getElementById('addressCity').value.trim();
-    const zip = document.getElementById('addressZip').value.trim();
+    const pincode = document.getElementById('addressZip').value.trim();
     const street = document.getElementById('addressStreet').value.trim();
-    // const email = document.getElementById('addressEmail').value.trim();
 
-    // Basic validation (optional, can be improved)
-    if (!firstName || !lastName || !city || !zip || !street || !state) {
-        showMessage('Please fill all address details before proceeding.', 'error');
+
+    // If any address field is empty, show pop message and stop
+    if (!firstName || !lastName || !city || !pincode || !street || !state ) {
+        showToast('Enter the Address');
         return;
     }
 
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const delivery = selectedDelivery === 'fast' ? 50 : 0;
+
+    let delivery = 0;
+    let deliveryText = '';
+    if (subtotal > 999) {
+        if (selectedDelivery === 'fast') {
+            delivery = 99;
+            deliveryText = 'Fast (5–7 Days) ₹99';
+        } else {
+            delivery = 0;
+            deliveryText = 'Standard Delivery (FREE)';
+        }
+    } else {
+        if (selectedDelivery === 'fast') {
+            delivery = 99;
+            deliveryText = 'Fast (5–7 Days) ₹99';
+        } else {
+            delivery = 60;
+            deliveryText = 'Standard (10-12 Days) ₹60';
+        }
+    }
+
     const total = subtotal + delivery;
     const itemsList = cart.map(item =>
         `Item ${item.originalId}, Quantity = *${item.quantity}*, Color = ${item.color}, Price= ₹${item.price.toFixed(2)}\n`
     ).join(', ');
-    const deliveryText = selectedDelivery === 'fast' ? 'Fast (5–7 Days) ₹99' : 'Standard (10-12 Days)₹60';
 
-    // Assemble address for WhatsApp message
-    const addressText = `Name: ${firstName} ${lastName}\nState: ${state}\nCity: ${city}\nZip: ${zip}\nAddress: ${street}`;
-    const message =
-        `HI Blushy Cheeks, I want to buy: \n[${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}\n\nAddress:\n${addressText}`;
+    let message =
+        `HI Blushy Cheeks, I want to buy: \n[${itemsList}]\n\nDelivery: ${deliveryText}\nTotal: ₹${total.toFixed(2)}\n\nAddress:\nName: ${firstName} ${lastName}\nState: ${state}\nCity: ${city}\npincode: ${pincode}\nAddress: ${street}`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappNumber = "918794387293";
